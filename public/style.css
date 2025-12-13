@@ -1249,6 +1249,14 @@ video {
   background-color: rgb(89 153 177 / var(--tw-bg-opacity, 1));
 }
 
+.bg-brand-light\/40 {
+  background-color: rgb(89 153 177 / 0.4);
+}
+
+.bg-white\/70 {
+  background-color: rgb(255 255 255 / 0.7);
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1660,5 +1668,10 @@ video {
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
