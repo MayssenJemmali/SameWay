@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SameWay – Ride Search</title>
     <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
   </head>
 
   <body class="min-h-screen bg-white text-slate-900">
@@ -48,7 +50,7 @@
     <!-- ============== END HEADER ============== -->
 
     <!-- ================= BREADCRUMB ================= -->
-     <br>
+
     <section class="page-container pt-6">
       <nav class="flex items-center gap-3 text-sm text-brand" aria-label="Breadcrumb">
         <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
@@ -70,10 +72,11 @@
 
     <!-- ================= MAIN CONTENT ================= -->
     <main class="page-container py-10">
+       <h1 class="text-[#003d6b] text-4xl font-bold absolute left-1/2 transform -translate-x-1/2">SEARCH FOR A RIDE</h1> 
+       <BR><BR>       
+
       <div class="max-w-2xl mx-auto">
 
-        <h1 class="text-3xl font-semibold text-brand mb-6 text-center"> Search for a Ride</h1><br>
-        
         <!-- Search Form -->
         <form class="space-y-4 mb-8">
           <!-- Departure Field -->
@@ -125,11 +128,13 @@
               required
             />
           </div>
-<br>
-          <!-- Search Button -->
-          <button type="submit" class="w-full bg-brand text-white py-3 rounded-md font-medium  transition shadow-sm text-center">
+
+        <!-- Search Button -->
+        <div class="flex justify-center">
+          <button type="submit" class="bg-brand hover:bg-brand-light text-white px-8 py-2 rounded-md font-medium transition-all duration-200 shadow-sm hover:shadow-md text-center text-sm">
             Search
           </button>
+        </div>
         </form>
 
         <!-- Results Section -->
@@ -158,7 +163,7 @@
               <div class="flex items-center gap-1">
                 <span class="font-semibold text-slate-900">Esprit</span>
                 <!-- Icon to redirect -->
-                <a href="#" class="p-1 hover:bg-slate-100 rounded-full transition">
+                <a href="detailstrajet.html" class="p-1 hover:bg-slate-100 rounded-full transition">
                 <svg xmlns="http://www.w3.org/2000/svg" 
                      viewBox="0 0 24 24" 
                      fill="none" 
