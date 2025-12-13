@@ -26,36 +26,49 @@
 </head>
 <body class="min-h-screen bg-white text-slate-900">
 
-  <!-- HEADER -->
-  <header class="border-b border-slate-200 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center justify-between py-5">
-        <a href="index.html" class="flex items-center gap-2">
-          <svg class="w-8 h-8 text-brand" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
-          </svg>
-          <span class="text-xl font-bold text-brand">SameWay</span>
-        </a>
+    <!-- ================= HEADER ================= -->
+    <header class="border-b border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between py-5">
 
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-          <a href="index.html" class="hover:text-brand transition-colors duration-200">Home</a>
-          <a href="#" class="hover:text-brand transition-colors duration-200">Map</a>
-          <a href="#" class="hover:text-brand transition-colors duration-200">Support</a>
-        </nav>
+          <a href="../index.html" class="flex items-center gap-2">
+            <img src="../assets/images/samway.png" alt="SameWay" class="h-8 w-auto" />
+          </a>
 
-        <div class="flex items-center gap-4">
-          <div class="hidden md:flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-md">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-4 h-4 text-slate-500 stroke-2">
-              <circle cx="11" cy="11" r="7"/>
-              <path d="M20 20l-3.5-3.5" stroke-linecap="round"/>
-            </svg>
-            <input type="text" placeholder="Search..." class="bg-transparent text-sm outline-none placeholder-slate-500 w-48"/>
+          <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+            <a href="../index.html" 
+               class="hover:text-brand transition-colors duration-200">Home</a>
+            <a href="#" 
+               class="hover:text-brand transition-colors duration-200">Map</a>
+            <a href="#" 
+               class="hover:text-brand transition-colors duration-200">Support</a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <div class="hidden md:flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor"
+                   class="w-4 h-4 text-slate-500">
+                <circle cx="11" cy="11" r="7" stroke-width="1.5" />
+                <path d="M20 20l-3.5-3.5" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="bg-transparent text-sm outline-none placeholder-slate-500 w-48"
+              />
+            </div>
+
+            <div class="w-9 h-9 rounded-full bg-slate-200 hover:bg-slate-300 transition-colors duration-200 cursor-pointer"></div>
           </div>
-          <div class="w-9 h-9 rounded-full bg-slate-200 hover:bg-slate-300 transition-colors duration-200 cursor-pointer"></div>
+
         </div>
       </div>
-    </div>
-  </header>
+    </header>
+    <!-- ============== END HEADER ============== -->
+
+  
+   
 
   <!-- BREADCRUMB & BACK BUTTON -->
    <br>
@@ -77,15 +90,15 @@
         </svg>
       </a>
       <span class="text-slate-400">›</span>
-      <a href="recherchedutrajet.html" class="hover:text-brand-light transition-colors duration-200">Trajet</a>
+      <a href="recherchedutrajet.html" class="hover:text-brand-light transition-colors duration-200">Trip</a>
       <span class="text-slate-400">›</span>
-      <span class="text-slate-700">Roue de la fortune</span>
+      <span class="text-slate-700">Wheel of Fortune</span>
     </nav>
   </section>
 
   <!-- MAIN CONTENT -->
   <main class="max-w-6xl mx-auto px-6 py-12">
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-16 text-brand">Roue de la fortune</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-16 text-brand">Wheel of Fortune</h1>
     
     <div class="max-w-2xl mx-auto">
       <!-- Wheel Container -->
@@ -114,17 +127,17 @@
             <circle cx="200" cy="200" r="28" fill="#1e40af"/>
             
             <!-- Text labels -->
-            <text x="125" y="85" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-45 125 85)">Réduction</text>
+            <text x="125" y="85" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-45 125 85)">Discount</text>
             <text x="125" y="108" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-45 125 108)">10%</text>
             
-            <text x="275" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 85)">Prochain</text>
-            <text x="275" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 105)">trajet</text>
-            <text x="275" y="125" text-anchor="middle" font-size="18" font-weight="800" fill="#1e40af" transform="rotate(45 275 125)">gratuit</text>
+            <text x="275" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 85)">Next</text>
+            <text x="275" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 105)">ride</text>
+            <text x="275" y="125" text-anchor="middle" font-size="18" font-weight="800" fill="#1e40af" transform="rotate(45 275 125)">FREE</text>
             
-            <text x="275" y="315" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(135 275 315)">Pas de</text>
-            <text x="275" y="335" text-anchor="middle" font-size="18" font-weight="700" fill="#64748b" transform="rotate(135 275 335)">gain</text>
+            <text x="275" y="315" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(135 275 315)">No</text>
+            <text x="275" y="335" text-anchor="middle" font-size="18" font-weight="700" fill="#64748b" transform="rotate(135 275 335)">win</text>
             
-            <text x="125" y="285" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-135 125 285)">Réduction</text>
+            <text x="125" y="285" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-135 125 285)">Discount</text>
             <text x="125" y="308" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-135 125 308)">20%</text>
           </svg>
         </div>
@@ -136,9 +149,9 @@
           <svg id="spin-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
           </svg>
-          <span id="spin-text">Faire tourner la roue</span>
+          <span id="spin-text">Spin the wheel</span>
         </button>
-        <p class="text-sm text-slate-600 font-medium">1 seul essai par jour</p>
+        <p class="text-sm text-slate-600 font-medium">1 attempt per day</p>
       </div>
     </div>
   </main>
