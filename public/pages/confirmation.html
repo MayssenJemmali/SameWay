@@ -7,6 +7,82 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+                </div>
+
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium transition-colors">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium transition-colors">Find a ride</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium transition-colors">Support</a>
+                </div>
+
+                <!-- Search Bar & Avatar -->
+                <div class="flex items-center gap-4">
+                    <!-- Search Bar - Hidden on small screens -->
+                    <div class="hidden sm:block relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <input 
+                            type="text" 
+                            placeholder="Search..." 
+                            class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#003d6b] focus:border-transparent sm:text-sm"
+                            style="min-width: 250px;"
+                        >
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="../assets/images/avatar.png" alt="User Avatar" class="w-12 h-12 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-[#003d6b] transition-all">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 rounded-lg hover:bg-gray-100" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu - Hidden by default -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#" class="block text-gray-700 hover:text-[#003d6b] text-base font-medium py-2">Home</a>
+                <a href="#" class="block text-gray-700 hover:text-[#003d6b] text-base font-medium py-2">Find a ride</a>
+                <a href="#" class="block text-gray-700 hover:text-[#003d6b] text-base font-medium py-2">Support</a>
+                
+                <!-- Mobile Search -->
+                <div class="relative pt-2">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <input 
+                        type="text" 
+                        placeholder="Search..." 
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#003d6b] focus:border-transparent text-sm"
+                    >
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
     <!-- Header -->
     <div class=" border-gray-200">
         <div class="py-6 border-b">
