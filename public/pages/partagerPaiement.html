@@ -61,7 +61,7 @@
 
         <!-- QR Card -->
         <div class="content-container">
-            <article class="card">
+            <article class="card border-4 border-brand rounded-lg">
                 <div class="card-body">
                     <div class="text-center">
                         <h2 class="text-xl tablet:text-2xl font-semibold mb-3 tablet:mb-4">Share this payment code</h2>
@@ -70,25 +70,25 @@
                             <img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=SameWayPayment"
                                 alt="QR Code" class="w-48 h-48 tablet:w-56 tablet:h-56" />
                         </div>
-                        <div class="flex justify-end mt-3">
-                            <button class="inline-flex items-center gap-2 px-3 py-2 rounded bg-accent text-white text-sm tablet:text-base">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5">
-                                    <circle cx="6" cy="12" r="3" stroke-width="1.5" />
-                                    <circle cx="18" cy="6" r="3" stroke-width="1.5" />
-                                    <circle cx="18" cy="18" r="3" stroke-width="1.5" />
-                                    <path d="M8.5 11L15.5 7M8.5 13L15.5 17" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
+                     <div class="flex justify-end mt-3">
+    <button class="flex items-center justify-center w-8 h-30 rounded-full bg-secondary text-white shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" class="w-6 h-6">
+            <circle cx="6" cy="12" r="3" stroke-width="1.5" />
+            <circle cx="18" cy="6" r="3" stroke-width="1.5" />
+            <circle cx="18" cy="18" r="3" stroke-width="1.5" />
+            <path d="M8.5 11L15.5 7M8.5 13L15.5 17" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+    </button>
+</div>
 
-                            </button>
-                        </div>
                     </div>
                 </div>
             </article>
 
             <!-- Continue button -->
             <div class="mt-6 tablet:mt-8 flex justify-center">
-                <a href="./trajet.html" class="btn bg-secondary text-white px-8 tablet:px-12 py-2.5 tablet:py-3">Continuer</a>
+                <a href="./trajet.html" class="btn bg-secondary text-white px-8 tablet:px-12 py-2.5 tablet:py-3">Continue</a>
             </div>
         </div>
     </main>

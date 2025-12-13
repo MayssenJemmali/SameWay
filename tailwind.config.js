@@ -27,7 +27,7 @@ module.exports = {
       },
       fontSize: {
         navSize: "24px",
-        heroSize: "74px",
+        heroSize: "64px",
         pSize: "18px",
       },
     },

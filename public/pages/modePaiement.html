@@ -63,44 +63,39 @@
                 <h2 class="text-xl md:text-2xl font-semibold mb-4">Choose payment method :</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <!-- Carte -->
-                    <button class="card border-brand shadow-sm">
-                        <div class="card-body flex items-center gap-3">
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" class="w-6 h-6 text-secondary">
-                                    <rect x="3" y="6" width="18" height="12" rx="2" stroke-width="1.5" />
-                                    <path d="M3 10h18" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                            <span class="text-lg font-semibold">Carte</span>
-                        </div>
+                    <button class="card border-4 border-brand shadow-sm flex flex-col items-center justify-center p-6"
+                        style="background-color: #B4D6E3; width: 150px; height: 150px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            class="w-10 h-10 text-secondary mb-3">
+                            <rect x="3" y="6" width="18" height="12" rx="2" stroke-width="1.5" />
+                            <path d="M3 10h18" stroke-width="1.5" />
+                        </svg>
+                        <span class="text-lg font-semibold text-center">Carte</span>
                     </button>
+
                     <!-- Mobile -->
-                    <button class="card">
-                        <div class="card-body flex items-center gap-3">
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" class="w-6 h-6 text-secondary">
-                                    <rect x="7" y="3" width="10" height="18" rx="2" stroke-width="1.5" />
-                                    <path d="M10 17h4" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </span>
-                            <span class="text-lg font-semibold">Mobile</span>
-                        </div>
+                    <button class="card flex flex-col items-center justify-center p-6"
+                        style="background-color: #B4D6E3; width: 150px; height: 150px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            class="w-10 h-10 text-secondary mb-3">
+                            <rect x="7" y="3" width="10" height="18" rx="2" stroke-width="1.5" />
+                            <path d="M10 17h4" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <span class="text-lg font-semibold text-center">Mobile</span>
                     </button>
+
                     <!-- Cash -->
-                    <button class="card">
-                        <div class="card-body flex items-center gap-3">
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" class="w-6 h-6 text-secondary">
-                                    <circle cx="12" cy="12" r="8" stroke-width="1.5" />
-                                    <path d="M12 8v8M9 11h6" stroke-width="1.5" stroke-linecap="round" />
-                                </svg>
-                            </span>
-                            <span class="text-lg font-semibold">Cash</span>
-                        </div>
+                    <button class="card flex flex-col items-center justify-center p-6"
+                        style="background-color: #B4D6E3; width: 150px; height: 150px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-10 h-10 tablet:w-12 tablet:h-12 text-green-500" style="color: #0D3B66;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 1v22M16 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H7" />
+                        </svg>
+                        <span class="text-lg font-semibold text-center">Cash</span>
                     </button>
+
+
                 </div>
             </section>
 
@@ -122,7 +117,7 @@
                     </label>
                 </div>
                 <div class="mt-6 flex items-center gap-3">
-                    <label class="font-medium">Promo Code</label>
+                    <label class="text-xl md:text-2xl font-semibold">Promo Code</label>
                     <input type="text" placeholder="Enter your code here"
                         class="px-3 py-2 border border-slate-300 rounded" />
                     <a href="#" class="text-accent text-sm hover:opacity-80">Get a code?</a>
