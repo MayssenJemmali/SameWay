@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SameWay – Évaluer trajet</title>
+
+    <!-- Page located in /public/pages -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="min-h-screen bg-white text-slate-900">
+    <!-- ================= HEADER (COMMUN) ================= -->
+    <header class="border-b border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between py-5">
+          <!-- Brand -->
+          <a href="../index.html" class="flex items-center gap-2">
+            <img
+              src="../assets/images/samway.png"
+              alt="SameWay"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <!-- Nav -->
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700"
+          >
+            <a href="../index.html" class="hover:text-brand">Home</a>
+            <a href="#" class="hover:text-brand">Map</a>
+            <a href="#" class="hover:text-brand">Support</a>
+          </nav>
+
+          <!-- Search + Avatar -->
+          <div class="flex items-center gap-4">
+            <div
+              class="hidden md:flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-md"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                class="w-4 h-4 text-slate-500"
+              >
+                <circle cx="11" cy="11" r="7" stroke-width="1.5" />
+                <path
+                  d="M20 20l-3.5-3.5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="bg-transparent text-sm outline-none placeholder-slate-500 w-48"
+              />
+            </div>
+
+            <div class="w-9 h-9 rounded-full bg-slate-200 overflow-hidden"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- Breadcrumb -->
+      <section class="page-container pt-6">
+        <nav
+          class="flex items-center gap-3 text-sm text-brand"
+          aria-label="Fil d’ariane"
+        >
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 hover:opacity-80"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                d="M3 10.5 12 3l9 7.5"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 10v10h14V10"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <span class="text-slate-400">›</span>
+          <a href="#" class="hover:opacity-80">Covoiturage</a>
+          <span class="text-slate-400">›</span>
+          <span class="text-slate-700">Evaluation trajet</span>
+        </nav>
+      </section>
+
+      <!-- Title -->
+      <section class="page-container pt-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-semibold text-brand tracking-wide">
+          EVALUER TRAJET
+        </h1>
+      </section>
+
+      <!-- Rating stars -->
+      <section class="page-container pt-12">
+        <div class="flex justify-center gap-16 md:gap-24">
+          <!-- Star 1 (active) -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-yellow-400"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">tres mauvais</p>
+          </div>
+
+          <!-- Star 2 (active) -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-yellow-400"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">mauvais</p>
+          </div>
+
+          <!-- Star 3 (outline) -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">bien</p>
+          </div>
+
+          <!-- Star 4 (outline) -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">très bien</p>
+          </div>
+
+          <!-- Star 5 (outline) -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">excellent</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Actions + textarea -->
+      <section class="page-container pt-14 pb-24">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start max-w-5xl mx-auto"
+        >
+          <!-- Left actions -->
+          <div class="space-y-7">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-700 mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M7 11V7a5 5 0 0 1 10 0v4"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <rect
+                    x="5"
+                    y="11"
+                    width="14"
+                    height="10"
+                    rx="2"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                <span>pour sécurité (urgent!)</span>
+              </div>
+
+              <a
+                href="#"
+                class="btn-brand w-full justify-center rounded-md py-4 text-base"
+              >
+                Signaler un probleme de securité
+              </a>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-700 mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M12 9v4"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path d="M12 16h.01" stroke-width="2" stroke-linecap="round" />
+                  <path
+                    d="M10.3 4.3 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>pour comportement</span>
+              </div>
+
+              <a
+                href="#"
+                class="btn-brand w-full justify-center rounded-md py-4 text-base"
+              >
+                Signaler un comportement
+              </a>
+            </div>
+          </div>
+
+          <!-- Right textarea -->
+          <div>
+            <textarea
+              class="w-full min-h-[220px] border border-slate-300 rounded-md p-4 text-base outline-none focus:border-brand"
+              placeholder="Décrire votre experience"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Validate -->
+        <div class="text-center mt-14">
+          <button class="btn-brand px-16 justify-center rounded-md py-4 text-base">
+            Valider
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER (COMMUN) ================= -->
+    <footer class="border-t border-slate-200">
+      <div class="page-container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+          <div>
+            <img
+              src="../assets/images/samway.png"
+              alt="SameWay"
+              class="h-10 w-auto"
+            />
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">INFO</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Map</a></li>
+              <li><a href="#" class="hover:text-brand">Schedule</a></li>
+              <li><a href="#" class="hover:text-brand">Pricing</a></li>
+              <li><a href="#" class="hover:text-brand">Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">ABOUT</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Blog</a></li>
+              <li><a href="#" class="hover:text-brand">About us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">CONTACT US</p>
+            <div class="space-y-1 text-sm text-slate-600">
+              <p>Pole ghazela, Ariana</p>
+              <p>+216 27429398</p>
+              <p>sameway@esprit.tn</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex items-center justify-between text-xs text-slate-500">
+          <p>© 2025 — Copyright</p>
+          <div class="flex items-center gap-4">
+            <span
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-slate-200 text-slate-700"
+              >IG</span
+            >
+            <span
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-slate-200 text-slate-700"
+              >FB</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

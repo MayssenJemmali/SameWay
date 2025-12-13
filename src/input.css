@@ -15,4 +15,15 @@
 
   .card { @apply border border-slate-300 rounded-lg bg-white; }
   .card-body { @apply p-4 md:p-5; }
+    /* Layout helpers */
+  .page-title { @apply text-center text-2xl md:text-3xl font-semibold text-brand; }
+  .panel { @apply border border-slate-300 rounded-lg bg-white shadow-sm; }
+
+  /* Breadcrumb */
+  .breadcrumb { @apply flex items-center gap-3 text-sm text-brand; }
+  .breadcrumb-sep { @apply text-slate-400; }
+
+  /* Form controls */
+  .input { @apply w-full border border-slate-300 rounded-md px-4 py-2 text-sm outline-none focus:border-brand; }
+  .textarea { @apply w-full border border-slate-300 rounded-md p-4 text-sm outline-none focus:border-brand; }
 }
