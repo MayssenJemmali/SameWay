@@ -15,4 +15,8 @@
 
   .card { @apply border border-slate-300 rounded-lg bg-white; }
   .card-body { @apply p-4 md:p-5; }
+  
+  .breadcrumb { @apply flex items-center gap-3 text-sm text-brand; }
+  .breadcrumb-sep { @apply text-slate-400; }
+
 }
