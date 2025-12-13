@@ -72,21 +72,120 @@
 
     <!-- Main Content -->
     <div class="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-12">
-        <!-- Filter Button -->
-        <div class="flex justify-end mb-6">
-            <button class="bg-white text-[#003d6b] border-2 border-[#003d6b] px-8 py-2.5 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
-                <span>Filtre</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
+        <!-- Filter Section -->
+        <div class="mb-8">
+            <!-- Filter Button -->
+            <div class="flex justify-end mb-4">
+                <button onclick="toggleFilter()" class="bg-white text-[#003d6b] border-2 border-[#003d6b] px-8 py-2.5 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
+                    <span>Filtre</span>
+                    <svg id="filterIcon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Filter Panel (Hidden by default) -->
+            <div id="filterPanel" class="hidden bg-gray-50 border-2 border-[#003d6b] rounded-xl p-6 space-y-6 mb-6">
+                <!-- Rating Filter -->
+                <div>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Rating minimum</label>
+                    <div class="flex items-center gap-4">
+                        <input type="range" min="1" max="5" value="3" step="0.5" class="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#003d6b]" id="ratingSlider" oninput="updateRatingValue()">
+                        <span id="ratingValue" class="text-[#003d6b] font-bold text-xl min-w-[60px]">3.0 ★</span>
+                    </div>
+                </div>
+
+                <!-- Distance Filter -->
+                <div>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Distance maximale</label>
+                    <div class="flex items-center gap-4">
+                        <input type="range" min="1" max="15" value="10" class="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#003d6b]" id="distanceSlider" oninput="updateDistanceValue()">
+                        <span id="distanceValue" class="text-[#003d6b] font-bold text-xl min-w-[80px]">10 min</span>
+                    </div>
+                </div>
+
+                <!-- Car Type Filter -->
+                <div>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Type de véhicule</label>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
+                            Tout
+                        </button>
+                        <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
+                            Berline
+                        </button>
+                        <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
+                            SUV
+                        </button>
+                        <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
+                            Citadine
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex gap-4 pt-4">
+                    <button onclick="applyFilters()" class="flex-1 bg-[#003d6b] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#002d4f] transition-colors">
+                        Appliquer
+                    </button>
+                    <button onclick="resetFilters()" class="flex-1 bg-white text-[#003d6b] border-2 border-[#003d6b] px-6 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors">
+                        Réinitialiser
+                    </button>
+                </div>
+            </div>
         </div>
+
+        <script>
+            function toggleFilter() {
+                const panel = document.getElementById('filterPanel');
+                const icon = document.getElementById('filterIcon');
+                panel.classList.toggle('hidden');
+                icon.style.transform = panel.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+
+            function updateRatingValue() {
+                const slider = document.getElementById('ratingSlider');
+                const value = document.getElementById('ratingValue');
+                value.textContent = parseFloat(slider.value).toFixed(1) + ' ★';
+            }
+
+            function updateDistanceValue() {
+                const slider = document.getElementById('distanceSlider');
+                const value = document.getElementById('distanceValue');
+                value.textContent = slider.value + ' min';
+            }
+
+            function toggleCarType(button) {
+                button.classList.toggle('bg-[#003d6b]');
+                button.classList.toggle('text-white');
+                button.classList.toggle('text-gray-700');
+            }
+
+            function applyFilters() {
+                alert('Filtres appliqués!');
+                // Here you would implement the actual filtering logic
+            }
+
+            function resetFilters() {
+                document.getElementById('ratingSlider').value = 3;
+                document.getElementById('distanceSlider').value = 10;
+                updateRatingValue();
+                updateDistanceValue();
+                
+                // Reset car type buttons
+                const buttons = document.querySelectorAll('[onclick="toggleCarType(this)"]');
+                buttons.forEach(btn => {
+                    btn.classList.remove('bg-[#003d6b]', 'text-white');
+                    btn.classList.add('text-gray-700');
+                });
+            }
+        </script>
 
         <!-- Driver Cards -->
         <div class="space-y-6">
             <!-- Driver Card 1 - Youssef -->
             <div class="bg-[#c8e6f5] rounded-2xl px-6 py-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow">
-                <img src="../assets/images/avatar1.png" alt="Avatar Youssef" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
+                <img src="../assets/images/avatar.png" alt="Avatar Youssef" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
                 
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center justify-between gap-3 mb-2">
@@ -108,7 +207,7 @@
 
             <!-- Driver Card 2 - Amira -->
             <div class="bg-[#c8e6f5] rounded-2xl px-6 py-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow">
-                <img src="../assets/images/avatar2.png" alt="Avatar Amira" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
+                <img src="../assets/images/avatar.png" alt="Avatar Amira" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
                 
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center justify-between gap-3 mb-2">
@@ -130,7 +229,7 @@
 
             <!-- Driver Card 3 - Ali -->
             <div class="bg-[#c8e6f5] rounded-2xl px-6 py-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow">
-                <img src="../assets/images/avatar3.png" alt="Avatar Ali" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
+                <img src="../assets/images/avatar.png" alt="Avatar Ali" class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0 bg-gray-800">
                 
                 <div class="flex-1 min-w-0">
                     <div class="flex items-center justify-between gap-3 mb-2">
