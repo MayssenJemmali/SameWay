@@ -1,0 +1,9 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.12);
+}
+
+/*# sourceMappingURL=scss.css.map */

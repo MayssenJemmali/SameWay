@@ -1,0 +1,13 @@
+// Variables globales
+$brand: #0D3B66;
+$brand-light: #5999B1;
+
+// Styles globaux légers
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+// Petit bonus visuel (autorisé)
+.card {
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.12);
+}

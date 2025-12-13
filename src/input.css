@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./scss.css";
+
+@layer components {
+  .page-container { @apply max-w-6xl mx-auto px-4; }
+  .content-container { @apply max-w-4xl mx-auto px-4; }
+
+  .section-title { @apply text-2xl md:text-3xl font-semibold text-slate-800; }
+  .muted { @apply text-slate-500; }
+
+  .btn { @apply inline-flex items-center gap-2 px-5 py-2 rounded-md font-medium transition; }
+  .btn-brand { @apply btn bg-brand text-white hover:bg-brand-light; }
+
+  .card { @apply border border-slate-300 rounded-lg bg-white; }
+  .card-body { @apply p-4 md:p-5; }
+}
