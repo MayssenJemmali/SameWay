@@ -137,7 +137,7 @@
           <h2 class="section-title text-brand mb-6">Results</h2>
           <br>
           <!-- Result Card -->
-          <div class="card card-body mb-4 hover:shadow-md transition">
+          <div class="card card-body mb-4 hover:shadow-md transition relative">
             <!-- Trajet -->
             <div class="flex items-center justify-between w-full mb-3">
               <span class="font-semibold text-slate-900">Manouba</span>
@@ -155,7 +155,20 @@
                 </svg>
               </div>
 
-              <span class="font-semibold text-slate-900">Esprit</span>
+              <div class="flex items-center gap-1">
+                <span class="font-semibold text-slate-900">Esprit</span>
+                <!-- Icon to redirect -->
+                <a href="#" class="p-1 hover:bg-slate-100 rounded-full transition">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                     viewBox="0 0 24 24" 
+                     fill="none" 
+                     stroke="currentColor" 
+                     class="w-5 h-5 text-brand hover:text-brand-light transition"
+                     stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+              </div>
             </div>
 
             <!-- Infos -->
