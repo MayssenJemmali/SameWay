@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Map</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center gap-4">
+                    <!-- Search (desktop) -->
+                    <div class="hidden sm:block relative">
+                        <input type="text" placeholder="Search..." class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]" style="min-width:250px">
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="../assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer">
+
+                    <!-- Mobile Menu -->
+                    <details class="md:hidden relative">
+                        <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </summary>
+
+                        <!-- Mobile Dropdown -->
+                        <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+                            <a href="#" class="block text-gray-700">Home</a>
+                            <a href="#" class="block text-gray-700">Map</a>
+                            <a href="#" class="block text-gray-700">Support</a>
+                            <input type="text" placeholder="Search..." class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="border-b border-gray-200">
+        <h1 class="text-[#003d6b] text-4xl md:text-5xl font-bold text-center py-6">LIVE MAP</h1>
+    </div>
+
+    <!-- Map Container -->
+    <div class="flex-1 relative">
+        <!-- Full Screen Map -->
+        <div class="w-full h-full bg-gray-100">
+            <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/10.1815,36.8065,13,0/1200x800@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw" 
+                 alt="Live Map" 
+                 class="w-full h-full object-cover">
+        </div>
+
+        <!-- You're Here Marker -->
+        <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div class="relative flex flex-col items-center">
+                <!-- Speech Bubble -->
+                <div class="bg-white text-[#003d6b] px-4 py-2 rounded-lg shadow-lg text-base md:text-lg font-medium mb-2 whitespace-nowrap">
+                    you're here
+                </div>
+                <!-- User Location Pin -->
+                <div class="relative">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-[#003d6b] rounded-full flex items-center justify-center border-4 border-white shadow-xl">
+                        <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                    </div>
+                    <!-- Blue Pulse Ring -->
+                    <div class="absolute inset-0 w-12 h-12 md:w-16 md:h-16 bg-[#003d6b] bg-opacity-30 rounded-full animate-ping"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESPRIT School Marker -->
+        <div class="absolute bottom-1/3 right-1/4 transform translate-x-1/4 translate-y-1/4">
+            <div class="relative">
+                <svg class="w-10 h-10 md:w-12 md:h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <div class="absolute -top-16 -left-8 bg-white px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+                    <div class="text-red-600 font-bold text-sm md:text-base">ESPRIT</div>
+                    <div class="text-gray-600 text-xs md:text-sm">engineering school</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Button -->
+        <div class="absolute bottom-8 md:bottom-12 right-8 md:right-16">
+            <button class="bg-[#003d6b] hover:bg-[#002d4f] text-white px-8 md:px-12 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-colors shadow-xl">
+                Rechercher Trajet
+            </button>
+        </div>
+    </div>
+</body>
+</html>
