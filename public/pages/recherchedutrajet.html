@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ride Search</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+<body class="bg-white min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+      </div>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-4">
+
+        <!-- Search (desktop) -->
+        <div class="hidden sm:block relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+            style="min-width:250px"
+          >
+        </div>
+
+        <!-- Avatar -->
+        <img src="../assets/images/avatar.png"
+             class="w-12 h-12 rounded-full cursor-pointer">
+
+        <!-- Mobile Menu (CSS only) -->
+        <details class="md:hidden relative">
+          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </summary>
+
+          <!-- Mobile Dropdown -->
+          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+            <a href="#" class="block text-gray-700">Home</a>
+            <a href="#" class="block text-gray-700">Find a ride</a>
+            <a href="#" class="block text-gray-700">Support</a>
+
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
+            >
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- ================= BREADCRUMB ================= -->
+
+    <section class="page-container pt-6">
+      <nav class="flex items-center gap-3 text-sm text-brand" aria-label="Breadcrumb">
+        <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" class="w-5 h-5">
+            <path d="M3 10.5 12 3l9 7.5" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 10v10h14V10" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <span class="text-slate-400">›</span>
+        <a href="#" class="hover:opacity-80">Ride</a>
+        <span class="text-slate-400">›</span>
+        <span class="text-slate-700">Ride Search</span>
+      </nav>
+    </section>
+    <!-- ============== END BREADCRUMB ============== -->
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="page-container py-10">
+      <h1 class="text-3xl md:text-4xl font-semibold text-brand mb-8 text-center">Search for a Ride</h1>
+
+      <div class="max-w-2xl mx-auto">
+
+        <!-- Search Form -->
+        <form class="space-y-4 mb-8">
+          <!-- Departure Field -->
+          <div class="flex items-center gap-3 border border-slate-300 rounded-md px-4 py-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 class="w-5 h-5 text-slate-500 flex-shrink-0" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <input
+              type="text"
+              name="departure"
+              placeholder="Departure"
+              class="flex-1 bg-transparent outline-none text-sm placeholder-slate-500"
+              required
+            />
+          </div><br>
+
+          <!-- Arrival Field -->
+          <div class="flex items-center gap-3 border border-slate-300 rounded-md px-4 py-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 class="w-5 h-5 text-slate-500 flex-shrink-0" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <input
+              type="text"
+              name="arrival"
+              placeholder="Arrival"
+              class="flex-1 bg-transparent outline-none text-sm placeholder-slate-500"
+              required
+            />
+          </div>
+          <br>
+
+          <!-- Date Field -->
+          <div class="flex items-center gap-3 border border-slate-300 rounded-md px-4 py-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 class="w-5 h-5 text-slate-500 flex-shrink-0" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <input
+              type="date"
+              name="date"
+              class="flex-1 bg-transparent outline-none text-sm placeholder-slate-500"
+              required
+            />
+          </div>
+
+        <!-- Search Button -->
+        <div class="flex justify-center">
+          <button type="submit" class="bg-brand hover:bg-brand-light text-white px-8 py-2 rounded-md font-medium transition-all duration-200 shadow-sm hover:shadow-md text-center text-sm">
+            Search
+          </button>
+        </div>
+        </form>
+
+        <!-- Results Section -->
+        <div class="mt-8">
+          <h2 class="section-title text-brand mb-6">Results</h2>
+          <br>
+          <!-- Result Card -->
+          <div class="card card-body mb-4 hover:shadow-md transition relative">
+            <!-- Trajet -->
+            <div class="flex items-center justify-between w-full mb-3">
+              <span class="font-semibold text-slate-900">Manouba</span>
+
+              <div class="flex items-center flex-1 mx-4">
+                <div class="flex-1 border-t border-slate-300"></div>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="w-5 h-5 text-slate-600 mx-2"
+                    stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+
+              <div class="flex items-center gap-1">
+                <span class="font-semibold text-slate-900">Esprit</span>
+                <!-- Icon to redirect -->
+                <a href="detailstrajet.html" class="p-1 hover:bg-slate-100 rounded-full transition">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                     viewBox="0 0 24 24" 
+                     fill="none" 
+                     stroke="currentColor" 
+                     class="w-5 h-5 text-brand hover:text-brand-light transition"
+                     stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Infos -->
+            <div class="flex items-center justify-between text-sm text-slate-600">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    class="w-4 h-4"
+                    stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>7:30 AM</span>
+                <span class="mx-1">•</span>
+                <span>1 h</span>
+              </div>
+
+              <!-- Prix -->
+              <span class="text-lg font-semibold text-brand">5 TND</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <!-- ============== END MAIN CONTENT ============== -->
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-slate-200">
+      <div class="page-container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          <img src="../assets/images/samway.png" class="h-10" />
+
+          <div>
+            <p class="font-semibold mb-3">INFO</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li>Map</li><li>Schedule</li><li>Pricing</li><li>Support</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold mb-3">ABOUT</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li>Blog</li><li>About us</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold mb-3">CONTACT US</p>
+            <p class="text-sm text-slate-600">Pole ghazela, Ariana<br />+216 27429398<br />sameway@esprit.tn</p>
+          </div>
+
+        </div>
+
+        <div class="mt-10 flex justify-between text-xs text-slate-500">
+          <p>© 2025 — Copyright</p>
+          <div class="flex gap-4">
+            <span class="w-8 h-8 flex items-center justify-center border rounded-full">IG</span>
+            <span class="w-8 h-8 flex items-center justify-center border rounded-full">FB</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
