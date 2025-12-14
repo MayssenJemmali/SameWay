@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: "640px",
+        laptop: "1024px",
+        desktop: "1280px",
+      },
       colors: {
         primary: '#FFFFFF',
         secondary: '#0D3B66',
@@ -22,7 +27,7 @@ module.exports = {
       },
       fontSize: {
         navSize: "24px",
-        heroSize: "74px",
+        heroSize: "64px",
         pSize: "18px",
       },
     },
