@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SameWay – Evaluate Trip</title>
+
+    <!-- Page located in /public/pages -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+<body class="min-h-screen bg-white text-slate-900">
+    <!-- ================= HEADER (COMMON) ================= -->
+     <nav class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+      </div>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-4">
+
+        <!-- Search (desktop) -->
+        <div class="hidden sm:block relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+            style="min-width:250px"
+          >
+        </div>
+
+        <!-- Avatar -->
+        <img src="../assets/images/avatar.png"
+             class="w-12 h-12 rounded-full cursor-pointer">
+
+        <!-- Mobile Menu (CSS only) -->
+        <details class="md:hidden relative">
+          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </summary>
+
+          <!-- Mobile Dropdown -->
+          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+            <a href="#" class="block text-gray-700">Home</a>
+            <a href="#" class="block text-gray-700">Find a ride</a>
+            <a href="#" class="block text-gray-700">Support</a>
+
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
+            >
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- Breadcrumb -->
+      <section class="page-container pt-6">
+        <nav
+          class="flex items-center gap-3 text-sm text-brand"
+          aria-label="Breadcrumb"
+        >
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 hover:opacity-80"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                d="M3 10.5 12 3l9 7.5"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 10v10h14V10"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <span class="text-slate-400">›</span>
+          <a href="#" class="hover:opacity-80">Carpooling</a>
+          <span class="text-slate-400">›</span>
+          <span class="text-slate-700">Evaluate Trip</span>
+        </nav>
+      </section>
+
+      <!-- Title -->
+      <section class="page-container pt-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-semibold text-brand tracking-wide">
+          EVALUATE TRIP
+        </h1>
+      </section>
+
+      <!-- Rating stars -->
+      <section class="page-container pt-12">
+        <div class="flex justify-center gap-16 md:gap-24">
+          <!-- Star 1 -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-yellow-400"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">very bad</p>
+          </div>
+
+          <!-- Star 2 -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-yellow-400"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">bad</p>
+          </div>
+
+          <!-- Star 3 -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">good</p>
+          </div>
+
+          <!-- Star 4 -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">very good</p>
+          </div>
+
+          <!-- Star 5 -->
+          <div class="flex flex-col items-center">
+            <svg
+              viewBox="0 0 24 24"
+              class="w-20 h-20 md:w-24 md:h-24 text-brand"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M12 2l2.95 6.63 7.05.61-5.33 4.62 1.6 6.89L12 17.77 5.73 20.75l1.6-6.89L2 9.24l7.05-.61L12 2z"
+                stroke-width="1.2"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="mt-4 text-base text-slate-700">excellent</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Actions + textarea -->
+      <section class="page-container pt-14 pb-24">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start max-w-5xl mx-auto"
+        >
+          <!-- LEFT ACTIONS -->
+<div class="space-y-6">
+
+  <!-- SAFETY ISSUE -->
+  <div>
+    <div class="flex items-center gap-2 mb-2 text-sm text-slate-600">
+      <!-- Lock icon -->
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           class="w-4 h-4">
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"
+              stroke-width="1.5"
+              stroke-linecap="round" />
+        <rect x="5" y="11" width="14" height="10" rx="2"
+              stroke-width="1.5" />
+      </svg>
+      <span>for safety (urgent)</span>
+    </div>
+
+    <!-- 👉 vers la page SOS -->
+    <a
+      href="../pages/sos.html"
+      class="block w-full rounded-md bg-brand px-6 py-4 text-center text-white font-medium hover:bg-brand-light transition"
+    >
+      Report a safety issue
+    </a>
+  </div>
+
+  <!-- BEHAVIOR ISSUE -->
+  <div>
+    <div class="flex items-center gap-2 mb-2 text-sm text-slate-600">
+      <!-- Warning icon -->
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           class="w-4 h-4">
+        <path d="M12 9v4"
+              stroke-width="1.5"
+              stroke-linecap="round" />
+        <path d="M12 16h.01"
+              stroke-width="2"
+              stroke-linecap="round" />
+        <path d="M10.3 4.3 2.5 18a2 2 0 0 0 1.7 3h15.6a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"
+              stroke-width="1.5"
+              stroke-linejoin="round" />
+      </svg>
+      <span>for behavior</span>
+    </div>
+
+    <!-- 👉 vers la page Report Profile -->
+    <a
+      href="../pages/report-profile.html"
+      class="block w-full rounded-md bg-brand px-6 py-4 text-center text-white font-medium hover:bg-brand-light transition"
+    >
+      Report a behavior issue
+    </a>
+  </div>
+
+</div>
+
+
+          <!-- Right textarea -->
+          <div>
+            <textarea
+              class="w-full min-h-[220px] border border-slate-300 rounded-md p-4 text-base outline-none focus:border-brand"
+              placeholder="Describe your experience"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Validate -->
+        <div class="text-center mt-14">
+          <button class="btn-brand px-16 justify-center rounded-md py-4 text-base">
+            Submit
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER (COMMON) ================= -->
+    <footer class="border-t border-slate-200">
+      <div class="page-container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+          <div>
+            <img
+              src="../assets/images/samway.png"
+              alt="SameWay"
+              class="h-10 w-auto"
+            />
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">INFO</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Map</a></li>
+              <li><a href="#" class="hover:text-brand">Schedule</a></li>
+              <li><a href="#" class="hover:text-brand">Pricing</a></li>
+              <li><a href="#" class="hover:text-brand">Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">ABOUT</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Blog</a></li>
+              <li><a href="#" class="hover:text-brand">About us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">CONTACT US</p>
+            <div class="space-y-1 text-sm text-slate-600">
+              <p>Pole ghazela, Ariana</p>
+              <p>+216 27429398</p>
+              <p>sameway@esprit.tn</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex items-center justify-between text-xs text-slate-500">
+          <p>© 2025 — Copyright</p>
+          <div class="flex items-center gap-4">
+          <a href="#" class="social-btn" aria-label="Instagram">
+  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+    <circle cx="12" cy="12" r="3"></circle>
+    <circle cx="16.2" cy="7.8" r="0.8" fill="currentColor" stroke="none"></circle>
+  </svg>
+</a>
+
+<a href="#" class="social-btn" aria-label="Facebook">
+  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <path d="M14 8h2V6h-2c-2 0-3 1-3 3v2H9v2h2v6h2v-6h2l1-2h-3V9c0-.7.3-1 1-1Z" fill="currentColor" stroke="none"></path>
+  </svg>
+</a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
