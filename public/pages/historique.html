@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment History</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="font-body bg-primary text-slate-900">
+
+    <!-- ================= HEADER ================= -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center gap-4">
+
+                    <!-- Search (desktop) -->
+                    <div class="hidden sm:block relative">
+                        <input type="text" placeholder="Search..."
+                            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+                            style="min-width:250px">
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="../assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer">
+
+                    <!-- Mobile Menu (CSS only) -->
+                    <details class="md:hidden relative">
+                        <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </summary>
+
+                        <!-- Mobile Dropdown -->
+                        <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+                            <a href="#" class="block text-gray-700">Home</a>
+                            <a href="#" class="block text-gray-700">Find a ride</a>
+                            <a href="#" class="block text-gray-700">Support</a>
+
+                            <input type="text" placeholder="Search..."
+                                class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container py-8">
+        <h1
+            class="section-title font-normal text-brand text-2xl tablet:text-3xl laptop:text-5xl mb-4 tablet:mb-6 text-center">
+            Payment history</h1>
+        <hr class="border-grayline mb-6" />
+
+        <nav class="breadcrumb mb-4 tablet:mb-6" aria-label="Breadcrumb">
+            <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    class="w-4 h-4 tablet:w-5 tablet:h-5">
+                    <path d="M3 10.5 12 3l9 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 10v10h14V10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+            <span class="breadcrumb-sep text-sm">›</span>
+            <a href="./paiement.html" class="hover:opacity-80 text-sm">Payment</a>
+            <span class="breadcrumb-sep text-sm">›</span>
+            <span class="text-slate-700 text-sm">Payment history</span>
+        </nav>
+
+        <div class="content-container space-y-5 tablet:space-y-6">
+            <article class="card">
+                <div class="card-body grid grid-cols-12 gap-2 tablet:gap-3 items-center">
+
+                    <div class="col-span-9 tablet:col-span-9">
+                        <div class="flex items-center gap-2 tablet:gap-3 text-sm tablet:text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-secondary">
+                                <path d="M3 13h18l-1.5-4.5A3 3 0 0 0 16.7 6H7.3A3 3 0 0 0 4.5 8.5L3 13Z"
+                                    stroke-width="1.5" />
+                                <circle cx="6.5" cy="16" r="1.5" />
+                                <circle cx="17.5" cy="16" r="1.5" />
+                            </svg>
+                            <span>Ariana</span>
+                            <span>⟶</span>
+                            <span>Esprit</span>
+                        </div>
+                        <div class="mt-1 tablet:mt-2 text-xs tablet:text-sm">
+                            <div class="flex items-center gap-2">
+                                <span>Status :</span>
+                                <span class="muted" style="color: black;">In progress</span>
+                            </div>
+                            <div class="flex items-center gap-2 mt-1 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-accent">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" ry="2" stroke-width="1.5" />
+                                    <path d="M3 9h18" stroke-width="1.5" />
+                                    <path d="M8 3v4M16 3v4" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <span class="text-xs tablet:text-sm" style="color: black;">20-10-2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-span-3 tablet:col-span-3 laptop:col-span-2 flex flex-col items-end gap-2 tablet:gap-3">
+                        <div class="text-base tablet:text-lg laptop:text-xl">2DT</div>
+                        <a href="./detailsPaiement.html"
+                            class="text-secondary hover:text-accent text-xl tablet:text-2xl"
+                            aria-label="Voir détails">➜</a>
+                    </div>
+                </div>
+            </article>
+
+            <br>
+            <article class="card">
+                <div class="card-body grid grid-cols-12 gap-2 tablet:gap-3 items-center">
+
+                    <div class="col-span-9 tablet:col-span-9">
+                        <div class="flex items-center gap-2 tablet:gap-3  text-sm tablet:text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-secondary">
+                                <path d="M3 13h18l-1.5-4.5A3 3 0 0 0 16.7 6H7.3A3 3 0 0 0 4.5 8.5L3 13Z"
+                                    stroke-width="1.5" />
+                                <circle cx="6.5" cy="16" r="1.5" />
+                                <circle cx="17.5" cy="16" r="1.5" />
+                            </svg>
+                            <span>Tunis</span>
+                            <span>⟶</span>
+                            <span>Esprit</span>
+                        </div>
+                        <div class="mt-1 tablet:mt-2 text-xs tablet:text-sm">
+                            <div class="flex items-center gap-2">
+                                <span>Status :</span>
+                                <span class="muted" style="color: black;">Completed</span>
+                            </div>
+                            <div class="flex items-center gap-2 mt-1 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-accent">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" ry="2" stroke-width="1.5" />
+                                    <path d="M3 9h18" stroke-width="1.5" />
+                                    <path d="M8 3v4M16 3v4" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <span class="text-xs tablet:text-sm" style="color: black;">22-10-2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-3 tablet:col-span-3 laptop:col-span-2 flex flex-col items-end gap-2 tablet:gap-3">
+                        <div class=" text-base tablet:text-lg laptop:text-xl">5DT</div>
+                        <a href="./detailsPaiement.html"
+                            class="text-secondary hover:text-accent text-xl tablet:text-2xl"
+                            aria-label="Voir détails">➜</a>
+                    </div>
+                </div>
+            </article>
+            <br>
+            <article class="card">
+                <div class="card-body grid grid-cols-12 gap-2 tablet:gap-3 items-center">
+
+                    <div class="col-span-9 tablet:col-span-9">
+                        <div class="flex items-center gap-2 tablet:gap-3 text-sm tablet:text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-secondary">
+                                <path d="M3 13h18l-1.5-4.5A3 3 0 0 0 16.7 6H7.3A3 3 0 0 0 4.5 8.5L3 13Z"
+                                    stroke-width="1.5" />
+                                <circle cx="6.5" cy="16" r="1.5" />
+                                <circle cx="17.5" cy="16" r="1.5" />
+                            </svg>
+                            <span>Ariana</span>
+                            <span>⟶</span>
+                            <span>Esprit</span>
+                        </div>
+                        <div class="mt-1 tablet:mt-2 text-xs tablet:text-sm">
+                            <div class="flex items-center gap-2">
+                                <span>Status :</span>
+                                <span class="muted" style="color: black;">Completed</span>
+                            </div>
+                            <div class="flex items-center gap-2 mt-1 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" class="w-4 h-4 tablet:w-5 tablet:h-5 text-accent">
+                                    <rect x="3" y="5" width="18" height="16" rx="2" ry="2" stroke-width="1.5" />
+                                    <path d="M3 9h18" stroke-width="1.5" />
+                                    <path d="M8 3v4M16 3v4" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <span class="text-xs tablet:text-sm" style="color: black;">25-10-2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-3 tablet:col-span-3 laptop:col-span-2 flex flex-col items-end gap-2 tablet:gap-3">
+                        <div class=" text-base tablet:text-lg laptop:text-xl">2DT</div>
+                        <a href="./detailsPaiement.html"
+                            class="text-secondary hover:text-accent text-xl tablet:text-2xl"
+                            aria-label="Voir détails">➜</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200">
+        <div class="page-container py-8 tablet:py-10">
+            <div class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-6 tablet:gap-10">
+
+                <img src="../assets/images/samway.png" class="h-8 tablet:h-10" />
+
+                <div>
+                    <p class="font-semibold mb-2 tablet:mb-3">INFO</p>
+                    <ul class="space-y-1.5 tablet:space-y-2 text-xs tablet:text-sm text-slate-600">
+                        <li>Map</li>
+                        <li>Schedule</li>
+                        <li>Pricing</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-2 tablet:mb-3">ABOUT</p>
+                    <ul class="space-y-1.5 tablet:space-y-2 text-xs tablet:text-sm text-slate-600">
+                        <li>Blog</li>
+                        <li>About us</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-2 tablet:mb-3">CONTACT US</p>
+                    <p class="text-xs tablet:text-sm text-slate-600">Pole ghazela, Ariana<br />+216
+                        27429398<br />sameway@esprit.tn</p>
+                </div>
+
+            </div>
+
+            <div class="mt-8 tablet:mt-10 flex justify-between text-xs text-slate-500">
+                <p>© 2025 — Copyright</p>
+                <div class="flex gap-3 tablet:gap-4">
+                    <span
+                        class="w-7 h-7 tablet:w-8 tablet:h-8 flex items-center justify-center border rounded-full">IG</span>
+                    <span
+                        class="w-7 h-7 tablet:w-8 tablet:h-8 flex items-center justify-center border rounded-full">FB</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SameWay – Result</title>
+
+    <!-- Page located in /public/pages -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body class="min-h-screen bg-white text-slate-900">
+    <!-- ================= HEADER (COMMON) ================= -->
+     <nav class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+      </div>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-4">
+
+        <!-- Search (desktop) -->
+        <div class="hidden sm:block relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+            style="min-width:250px"
+          >
+        </div>
+
+        <!-- Avatar -->
+        <img src="../assets/images/avatar.png"
+             class="w-12 h-12 rounded-full cursor-pointer">
+
+        <!-- Mobile Menu (CSS only) -->
+        <details class="md:hidden relative">
+          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </summary>
+
+          <!-- Mobile Dropdown -->
+          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+            <a href="#" class="block text-gray-700">Home</a>
+            <a href="#" class="block text-gray-700">Find a ride</a>
+            <a href="#" class="block text-gray-700">Support</a>
+
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
+            >
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- Breadcrumb -->
+      <section class="page-container pt-6">
+        <nav class="flex items-center gap-3 text-sm text-brand" aria-label="Breadcrumb">
+          <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
+            <!-- Home icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" class="w-5 h-5">
+              <path d="M3 10.5 12 3l9 7.5" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M5 10v10h14V10" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+          <span class="text-slate-400">›</span>
+          <a href="#" class="hover:opacity-80">Carpooling</a>
+          <span class="text-slate-400">›</span>
+          <span class="text-slate-700">Result</span>
+        </nav>
+      </section>
+
+      <!-- Title -->
+      <section class="page-container pt-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-semibold text-brand leading-tight">
+          You found a carpool!
+        </h1>
+
+        <p class="mt-6 text-base md:text-lg text-brand">
+          You will be accompanied by 3 travelers
+        </p>
+      </section>
+
+      <!-- Cards -->
+      <section class="page-container pt-10 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Card 1 -->
+          <article class="rounded-lg bg-brand-light/40 p-8 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-white/70 overflow-hidden flex items-center justify-center">
+              <img src="../assets/images/avatar.png" alt="User" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-5 text-xl font-semibold text-slate-800">Mohamed</p>
+
+            <a
+              href="#"
+              class="mt-8 inline-flex items-center justify-center rounded-sm bg-brand px-6 py-2 text-white text-sm font-medium hover:bg-brand-light transition"
+            >
+              View profile
+            </a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="rounded-lg bg-brand-light/40 p-8 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-white/70 overflow-hidden flex items-center justify-center">
+              <img src="../assets/images/avatar.png" alt="User" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-5 text-xl font-semibold text-slate-800">Mohamed</p>
+
+            <a
+              href="#"
+              class="mt-8 inline-flex items-center justify-center rounded-sm bg-brand px-6 py-2 text-white text-sm font-medium hover:bg-brand-light transition"
+            >
+              View profile
+            </a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="rounded-lg bg-brand-light/40 p-8 flex flex-col items-center text-center">
+            <div class="w-16 h-16 rounded-full bg-white/70 overflow-hidden flex items-center justify-center">
+              <img src="../assets/images/avatar.png" alt="User" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-5 text-xl font-semibold text-slate-800">Mohamed</p>
+
+            <a
+              href="#"
+              class="mt-8 inline-flex items-center justify-center rounded-sm bg-brand px-6 py-2 text-white text-sm font-medium hover:bg-brand-light transition"
+            >
+              View profile
+            </a>
+          </article>
+        </div>
+
+        <!-- Confirm -->
+        <div class="text-center mt-12">
+          <button class="btn-brand px-16 justify-center rounded-md py-4 text-base">
+            Confirm
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER (COMMON) ================= -->
+    <footer class="border-t border-slate-200">
+      <div class="page-container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+          <div>
+            <img src="../assets/images/samway.png" alt="SameWay" class="h-10 w-auto" />
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">INFO</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Map</a></li>
+              <li><a href="#" class="hover:text-brand">Schedule</a></li>
+              <li><a href="#" class="hover:text-brand">Pricing</a></li>
+              <li><a href="#" class="hover:text-brand">Support</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">ABOUT</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-brand">Blog</a></li>
+              <li><a href="#" class="hover:text-brand">About us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-slate-800 mb-3">CONTACT US</p>
+            <div class="space-y-1 text-sm text-slate-600">
+              <p>Pole ghazela, Ariana</p>
+              <p>+216 27429398</p>
+              <p>sameway@esprit.tn</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex items-center justify-between text-xs text-slate-500">
+          <p>© 2025 — Copyright</p>
+          <div class="flex items-center gap-4">
+           <a href="#" class="social-btn" aria-label="Instagram">
+  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+    <circle cx="12" cy="12" r="3"></circle>
+    <circle cx="16.2" cy="7.8" r="0.8" fill="currentColor" stroke="none"></circle>
+  </svg>
+</a>
+
+<a href="#" class="social-btn" aria-label="Facebook">
+  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <path d="M14 8h2V6h-2c-2 0-3 1-3 3v2H9v2h2v6h2v-6h2l1-2h-3V9c0-.7.3-1 1-1Z" fill="currentColor" stroke="none"></path>
+  </svg>
+</a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="font-body bg-primary text-slate-900">
+    <!-- ================= HEADER ================= -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center gap-4">
+
+                    <!-- Search (desktop) -->
+                    <div class="hidden sm:block relative">
+                        <input type="text" placeholder="Search..."
+                            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+                            style="min-width:250px">
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="../assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer">
+
+                    <!-- Mobile Menu (CSS only) -->
+                    <details class="md:hidden relative">
+                        <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </summary>
+
+                        <!-- Mobile Dropdown -->
+                        <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+                            <a href="#" class="block text-gray-700">Home</a>
+                            <a href="#" class="block text-gray-700">Find a ride</a>
+                            <a href="#" class="block text-gray-700">Support</a>
+
+                            <input type="text" placeholder="Search..."
+                                class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container py-8" style="color: black;">
+
+        <h1 class="section-title font-normal text-brand text-3xl md:text-5xl text-center">Payment</h1>
+        <hr class="border-grayline mt-6 mb-6" />
+
+        <div class="content-container">
+            <article class="card">
+                <div class="card-body">
+
+                    <div class="flex items-center gap-3 text-secondary text-lg font-semibold">
+                        <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-slate-300 text-brand">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" class="w-5 h-5">
+                                <circle cx="12" cy="12" r="9" stroke-width="1.5" />
+                                <path d="M8 12l2.5 2.5L16 9" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span style="color: black;">Confirm payment</span>
+                    </div>
+
+                    <div class="mt-3 flex items-center gap-3 text-2xl font-semibold">
+                        <span
+                            class="inline-flex items-center justify-center w-8 h-8 rounded-full border border-slate-300 text-brand">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-6 h-6 text-green-500" style="color: #0D3B66;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 1v22M16 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H7" />
+                            </svg>
+
+                        </span>
+                        <span>2.00 DT</span>
+                    </div>
+
+                    <div class="mt-6" style="color: black;">
+                        <div class="flex justify-between ">
+                            <span>Asma sellami</span>
+                            <span>1 DT</span>
+                        </div>
+                        <div class="flex justify-between mt-1">
+                            <span>oumaima houimel</span>
+                            <span>1 DT</span>
+                        </div>
+
+                        <div class="mt-4 flex justify-between font-semibold font-medium">
+                            <span>Discounts and offers</span>
+                            <span>0.00 DT</span>
+                        </div>
+                        <hr class="my-3 border-grayline" />
+                        <div class="flex justify-between text-slate-900 font-semibold">
+                            <span>Total</span>
+                            <span>2 DT</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="mt-6 flex justify-center gap-4">
+
+                <a href="./detailsPaiement.html" class="btn-brand px-6 py-2">View details</a>
+
+                <a href="#" class="btn-brand px-6 py-2" style="background-color: #5999B1;">
+                    View map
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200">
+        <div class="page-container py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <img src="../assets/images/samway.png" class="h-10" />
+                <div>
+                    <p class="font-semibold mb-3">INFO</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>Map</li>
+                        <li>Schedule</li>
+                        <li>Pricing</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-semibold mb-3">ABOUT</p>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>Blog</li>
+                        <li>About us</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-semibold mb-3">CONTACT US</p>
+                    <p class="text-sm text-slate-600">Pole ghazela, Ariana<br />+216 27429398<br />sameway@esprit.tn</p>
+                </div>
+            </div>
+            <div class="mt-10 flex justify-between text-xs text-slate-500">
+                <p>© 2025 — Copyright</p>
+                <div class="flex gap-4">
+                    <span class="w-8 h-8 flex items-center justify-center border rounded-full">IG</span>
+                    <span class="w-8 h-8 flex items-center justify-center border rounded-full">FB</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
