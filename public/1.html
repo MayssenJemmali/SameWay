@@ -11,166 +11,125 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
 
-<!-- Header -->
+<!-- HEADER -->
 <header class="bg-white shadow-sm">
-
-
-<!-- Navbar -->
-<nav class="bg-white border-b border-gray-200 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-20">
 
       <!-- Logo -->
-      <div class="flex-shrink-0">
-        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">   
+      <img src="../assets/images/samway.png" class="h-16">
 
-
+      <!-- Links -->
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#" class="hover:text-[#0D3B66]">Home</a>
+        <a href="#" class="hover:text-[#0D3B66]">Find a Ride</a>
+        <a href="#" class="hover:text-[#0D3B66]">Support</a>
       </div>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a Ride</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
-      </div>
-
-      <!-- Right side -->
+      <!-- Right -->
       <div class="flex items-center gap-4">
-
-        <!-- Search (desktop) -->
-        <div class="hidden sm:block relative">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
-            style="min-width:250px"
-          >
-        </div>
-
-        <!-- Avatar -->
+        <input type="text" placeholder="Search..."
+               class="hidden sm:block px-4 py-2 border rounded-lg bg-gray-100">
         <img src="../assets/images/avatar.png"
-             alt="User Avatar"
-             class="w-12 h-12 rounded-full cursor-pointer">
-
-        <!-- Mobile Menu -->
-        <details class="md:hidden relative">
-          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </summary>
-
-          <!-- Mobile Dropdown -->
-          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
-            <a href="#" class="block text-gray-700">Home</a>
-            <a href="#" class="block text-gray-700">Find a Ride</a>
-            <a href="#" class="block text-gray-700">Support</a>
-
-            <input
-              type="text"
-              placeholder="Search..."
-              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
-            >
-          </div>
-        </details>
-
+             class="w-12 h-12 rounded-full">
       </div>
+
     </div>
   </div>
 </nav>
 </header>
 
-<!-- Breadcrumb -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-gray-600">
+<!-- BREADCRUMB -->
+<div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex items-center gap-2 text-sm text-gray-600">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
         </svg>
         <span>›</span>
-        <a href="#" class="hover:text-blue-600">Driver Dashboard</a>
+        <a href="#" class="hover:text-[#0D3B66]">Driver Dashboard</a>
         <span>›</span>
-        <span class="text-gray-900 font-medium">Trusted Contacts</span>
+        <span class="font-medium text-gray-900">Trusted Contacts</span>
     </div>
 </div>
 
-<!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-8">
 
+<!-- Back Button -->
 <a href="index.html"
-   class="inline-flex mb-6 items-center space-x-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">
+   class="inline-flex mb-6 items-center gap-2 px-4 py-2 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85] transition">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               d="M15 19l-7-7 7-7"/>
     </svg>
-    <span>Back</span>
+    Back
 </a>
 
+<h1 class="text-4xl md:text-5xl font-bold text-center mb-12">
+    Trusted Contacts
+</h1>
 
-    <h1 class="text-4xl md:text-5xl font-bold text-center mb-12">
-        Trusted Contacts
-    </h1>
+<!-- CONTACTS GRID -->
+<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
 
-    <!-- Contacts Grid -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-
-        <!-- Parents -->
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-            <div class="flex items-center space-x-4 mb-4">
-                <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center">
-                    ✖
-                </div>
-                <h3 class="text-2xl font-semibold">Parents</h3>
+    <!-- Parents -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center text-xl">
+                ✖
             </div>
-            <div class="flex space-x-3">
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">📞</button>
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">💬</button>
-            </div>
+            <h3 class="text-2xl font-semibold">Parents</h3>
         </div>
-
-        <!-- Hospital -->
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-            <div class="flex items-center space-x-4 mb-4">
-                <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center">
-                    ✖
-                </div>
-                <h3 class="text-2xl font-semibold">Hospital</h3>
-            </div>
-            <div class="flex space-x-3">
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">📞</button>
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">💬</button>
-            </div>
+        <div class="flex gap-3">
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">📞</button>
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">💬</button>
         </div>
-
-        <!-- Police -->
-        <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-            <div class="flex items-center space-x-4 mb-4">
-                <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center">
-                    ✖
-                </div>
-                <h3 class="text-2xl font-semibold">Police</h3>
-            </div>
-            <div class="flex space-x-3">
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">📞</button>
-                <button class="p-3 bg-blue-50 rounded-lg hover:bg-blue-100">💬</button>
-            </div>
-        </div>
-
     </div>
 
-    <!-- Action Buttons -->
-    <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="px-8 py-4 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition text-lg font-medium">
-            VIEW MY CONTACTS
-        </button>
-        <button class="px-8 py-4 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition text-lg font-medium">
-            ADD A CONTACT
-        </button>
+    <!-- Hospital -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center text-xl">
+                ✖
+            </div>
+            <h3 class="text-2xl font-semibold">Hospital</h3>
+        </div>
+        <div class="flex gap-3">
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">📞</button>
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">💬</button>
+        </div>
     </div>
+
+    <!-- Police -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-gray-200 octagon flex items-center justify-center text-xl">
+                ✖
+            </div>
+            <h3 class="text-2xl font-semibold">Police</h3>
+        </div>
+        <div class="flex gap-3">
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">📞</button>
+            <button class="p-3 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85]">💬</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ACTION BUTTONS -->
+<div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+    <button class="px-8 py-4 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85] transition text-lg font-medium">
+        VIEW MY CONTACTS
+    </button>
+    <button class="px-8 py-4 bg-[#0D3B66] text-white rounded-lg hover:bg-[#144d85] transition text-lg font-medium">
+        ADD A CONTACT
+    </button>
+</div>
 
 </main>
-
 </body>
 </html>

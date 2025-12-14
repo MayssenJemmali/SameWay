@@ -1,226 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SameWay - Security Center</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>SameWay - Security Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-white">
 
-<!-- Header -->
-<header class="bg-white shadow-sm">
+<!-- HEADER -->
+<header class="border-b">
+  <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <img src="../assets/images/samway.png" class="h-14">
 
-<!-- Navbar -->
-<nav class="bg-white border-b border-gray-200 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
-
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
-      </div>
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a Ride</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
-      </div>
-
-      <!-- Right side -->
-      <div class="flex items-center gap-4">
-
-        <!-- Search (desktop) -->
-        <div class="hidden sm:block relative">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
-            style="min-width:250px"
-          >
-        </div>
-
-        <!-- Avatar -->
-        <img src="../assets/images/avatar.png"
-             alt="User Avatar"
-             class="w-12 h-12 rounded-full cursor-pointer">
-
-        <!-- Mobile Menu -->
-        <details class="md:hidden relative">
-          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </summary>
-
-          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
-            <a href="#" class="block text-gray-700">Home</a>
-            <a href="#" class="block text-gray-700">Find a Ride</a>
-            <a href="#" class="block text-gray-700">Support</a>
-
-            <input
-              type="text"
-              placeholder="Search..."
-              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
-            >
-          </div>
-        </details>
-
-      </div>
+    <div class="hidden md:flex gap-10 text-lg">
+      <a href="#">Home</a>
+      <a href="#">Find a ride</a>
+      <a href="#">Support</a>
     </div>
-  </div>
-</nav>
+
+    <div class="flex items-center gap-4">
+      <input type="text" placeholder="Search..."
+             class="hidden sm:block px-4 py-2 border rounded-lg bg-gray-100">
+      <img src="../assets/images/avatar.png" class="w-10 h-10 rounded-full">
+    </div>
+  </nav>
 </header>
 
-<!-- Breadcrumb -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex items-center space-x-2 text-sm text-gray-600 flex-wrap">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-        </svg>
-        <span>›</span>
-        <a href="#" class="hover:text-blue-600">Driver Dashboard</a>
-        <span>›</span>
-        <a href="#" class="hover:text-blue-600">Trusted Contacts</a>
-        <span>›</span>
-        <span class="text-gray-900 font-medium">Security Center</span>
-    </div>
+<!-- BREADCRUMB -->
+<div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-600 flex items-center gap-2">
+  🏠
+  <a href="#" class="text-blue-900 underline">Driver Dashboard</a>
+  ›
+  <a href="#" class="text-blue-900 underline">Trusted Contacts</a>
+  ›
+  <span class="font-medium text-black">Security Center</span>
 </div>
 
-<!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6">
 
-    <!-- Back button -->
+<!-- Back -->
 <a href="index.html"
-   class="inline-flex mb-6 items-center space-x-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 19l-7-7 7-7"/>
-    </svg>
-    <span>Back</span>
+   class="inline-flex items-center gap-2 mb-6 px-5 py-2 bg-[#0D3B66] text-white rounded-md">
+  ← Back
 </a>
 
+<div class="grid lg:grid-cols-2 gap-16 items-start">
 
-    <div class="grid lg:grid-cols-2 gap-8 items-start">
+<!-- LEFT ACTIONS -->
+<div class="space-y-8 pt-12">
+  <button class="w-80 py-4 bg-[#5F9FB7] text-white text-lg rounded">
+    Share My Location
+  </button>
 
-        <!-- Left Column -->
-        <div class="space-y-6">
-            <button class="w-full px-8 py-6 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-xl font-medium shadow-lg">
-                Share My Location
-            </button>
+  <button class="w-80 py-4 bg-[#5F9FB7] text-white text-lg rounded">
+    Alert My Contacts
+  </button>
 
-            <button class="w-full px-8 py-6 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-xl font-medium shadow-lg">
-                Alert My Contacts
-            </button>
+  <button class="w-80 py-4 bg-[#5F9FB7] text-white text-lg rounded">
+    Restart Timer
+  </button>
+</div>
 
-            <button class="w-full px-8 py-6 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition text-xl font-medium shadow-lg">
-                Restart Timer
-            </button>
-        </div>
+<!-- RIGHT -->
+<div class="space-y-6">
 
-        <!-- Right Column -->
-        <div class="space-y-6">
+<!-- View History -->
+<button class="w-80 py-3 border-2 border-[#0D3B66] text-[#0D3B66] text-lg rounded">
+  View History
+</button>
 
-            <button class="w-full px-6 py-4 bg-white border-2 border-cyan-600 text-cyan-600 rounded-lg hover:bg-cyan-50 transition text-lg font-medium">
-                View History
-            </button>
+<!-- TIMER CARD -->
+<div class="bg-[#0D3B66] text-white rounded-xl p-8 w-80">
 
-            <!-- SOS Timer Card -->
-            <div class="bg-blue-900 rounded-2xl p-8 shadow-2xl">
-                <h2 class="text-white text-center text-2xl font-bold mb-6">
-                    SOS ALERT TIMER
-                </h2>
+  <h2 class="text-center font-semibold mb-6">ALERT SOS TIMER</h2>
 
-                <!-- Timer Display -->
-                <div class="flex items-center justify-center space-x-4 mb-6">
-                    <div class="text-center">
-                        <div class="bg-cyan-400 rounded-xl px-8 py-6 mb-2">
-                            <span id="hours" class="text-white text-5xl font-bold">00</span>
-                        </div>
-                        <span class="text-white text-sm">Hours</span>
-                    </div>
-
-                    <span class="text-white text-5xl font-bold">:</span>
-
-                    <div class="text-center">
-                        <div class="bg-cyan-400 rounded-xl px-8 py-6 mb-2">
-                            <span id="minutes" class="text-white text-5xl font-bold">30</span>
-                        </div>
-                        <span class="text-white text-sm">Minutes</span>
-                    </div>
-                </div>
-
-                <!-- Timer Controls -->
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <button id="startBtn" class="px-8 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition font-medium text-lg">
-                        Start
-                    </button>
-                    <button id="pauseBtn" class="px-8 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition font-medium text-lg">
-                        Pause
-                    </button>
-                    <button id="resetBtn" class="px-8 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-600 transition font-medium text-lg">
-                        Reset
-                    </button>
-                </div>
-            </div>
-        </div>
+  <!-- TIME -->
+  <div class="flex justify-center items-center gap-4 mb-6">
+    <div class="bg-[#B4D6E3] text-[#0D3B66] text-4xl font-bold px-6 py-4 rounded">
+      00
     </div>
+    :
+    <div class="bg-[#B4D6E3] text-[#0D3B66] text-4xl font-bold px-6 py-4 rounded">
+      30
+    </div>
+  </div>
+
+  <div class="flex justify-between px-4 text-xs mb-6">
+    <span>Hour</span>
+    <span>Minute</span>
+  </div>
+
+</div>
+
+<!-- CONTROLS -->
+<div class="flex gap-6">
+  <button class="px-6 py-3 bg-[#0D3B66] text-white rounded">Start</button>
+  <button class="px-6 py-3 bg-[#0D3B66] text-white rounded">Pause</button>
+  <button class="px-6 py-3 bg-[#0D3B66] text-white rounded">Reset</button>
+</div>
+
+</div>
+</div>
 </main>
-
-<script>
-    let timerInterval;
-    let totalSeconds = 30 * 60;
-    let isRunning = false;
-
-    const hoursDisplay = document.getElementById('hours');
-    const minutesDisplay = document.getElementById('minutes');
-    const startBtn = document.getElementById('startBtn');
-    const pauseBtn = document.getElementById('pauseBtn');
-    const resetBtn = document.getElementById('resetBtn');
-
-    function updateDisplay() {
-        const hours = Math.floor(totalSeconds / 3600);
-        const minutes = Math.floor((totalSeconds % 3600) / 60);
-
-        hoursDisplay.textContent = String(hours).padStart(2, '0');
-        minutesDisplay.textContent = String(minutes).padStart(2, '0');
-    }
-
-    function startTimer() {
-        if (!isRunning && totalSeconds > 0) {
-            isRunning = true;
-            timerInterval = setInterval(() => {
-                if (totalSeconds > 0) {
-                    totalSeconds--;
-                    updateDisplay();
-                } else {
-                    pauseTimer();
-                    alert('Timer finished! Time is up!');
-                }
-            }, 1000);
-        }
-    }
-
-    function pauseTimer() {
-        isRunning = false;
-        clearInterval(timerInterval);
-    }
-
-    function resetTimer() {
-        pauseTimer();
-        totalSeconds = 30 * 60;
-        updateDisplay();
-    }
-
-    startBtn.addEventListener('click', startTimer);
-    pauseBtn.addEventListener('click', pauseTimer);
-    resetBtn.addEventListener('click', resetTimer);
-
-    updateDisplay();
-</script>
 
 </body>
 </html>
