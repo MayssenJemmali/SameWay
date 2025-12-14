@@ -10,114 +10,99 @@
   </head>
 
   <body class="min-h-screen bg-white text-slate-900">
-    <!-- ================= HEADER (COMMON) ================= -->
-     <nav class="bg-white border-b border-gray-200 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
-
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
-      </div>
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center space-x-8">
-       <a href="../index.html" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
-        <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
-      </div>
-
-      <!-- Right side -->
-      <div class="flex items-center gap-4">
-
-        <!-- Search (desktop) -->
-        <div class="hidden sm:block relative">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
-            style="min-width:250px"
-          >
-        </div>
-
-        <!-- Avatar -->
-        <img src="../assets/images/avatar.png"
-             class="w-12 h-12 rounded-full cursor-pointer">
-
-        <!-- Mobile Menu (CSS only) -->
-        <details class="md:hidden relative">
-          <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </summary>
-
-          <!-- Mobile Dropdown -->
-          <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
-            <a href="../index.html" class="block text-gray-700">Home</a>
-            <a href="#" class="block text-gray-700">Find a ride</a>
-            <a href="#" class="block text-gray-700">Support</a>
-
-            <input
-              type="text"
-              placeholder="Search..."
-              class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50"
-            >
+    <!-- ================= HEADER ================= -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto" />
           </div>
-        </details>
 
+          <!-- Desktop Links -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="../index.html" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+            <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+            <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+          </div>
+
+          <!-- Right side -->
+          <div class="flex items-center gap-4">
+            <!-- Search (desktop) -->
+            <div class="hidden sm:block relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+                style="min-width: 250px"
+              />
+            </div>
+
+            <!-- Avatar -->
+            <img src="../assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer" alt="User" />
+
+            <!-- Mobile Menu (CSS only) -->
+            <details class="md:hidden relative">
+              <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </summary>
+
+              <!-- Mobile Dropdown -->
+              <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+                <a href="../index.html" class="block text-gray-700">Home</a>
+                <a href="#" class="block text-gray-700">Find a ride</a>
+                <a href="#" class="block text-gray-700">Support</a>
+
+                <input type="text" placeholder="Search..." class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50" />
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
+    </nav>
 
     <!-- ================= MAIN ================= -->
     <main>
       <!-- Breadcrumb + Back -->
-     <section class="page-container pt-6">
-  <div class="flex items-center justify-between">
-    <!-- Breadcrumb -->
-    <nav class="flex items-center gap-3 text-sm text-brand" aria-label="Breadcrumb">
-      <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" class="w-5 h-5">
-          <path d="M3 10.5 12 3l9 7.5" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M5 10v10h14V10" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </a>
+      <section class="max-w-6xl mx-auto px-6 pt-6">
+        <div class="flex items-center justify-between">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-3 text-sm text-brand" aria-label="Breadcrumb">
+            <a href="../index.html" class="inline-flex items-center gap-2 hover:opacity-80">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+                <path d="M3 10.5 12 3l9 7.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 10v10h14V10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <span class="text-slate-400">›</span>
+            <a href="#" class="hover:opacity-80">Safety</a>
+            <span class="text-slate-400">›</span>
+            <span class="text-slate-700">SOS</span>
+          </nav>
 
-      <span class="text-slate-400">›</span>
-      <a href="#" class="hover:opacity-80">Safety</a>
-      <span class="text-slate-400">›</span>
-      <span class="text-slate-700">SOS</span>
-    </nav>
-
-    <!-- Back button (RIGHT) -->
-   <a
-  href="../pages/CourseEnRoute.html"
-  class="inline-flex items-center gap-3 rounded-md bg-brand px-6 py-3 text-white font-medium hover:bg-brand-light transition"
->
-
-      <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/15">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" class="w-5 h-5">
-          <path d="M15 18l-6-6 6-6" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </span>
-      Back
-    </a>
-  </div>
-</section>
+          <!-- Back button (RIGHT) -->
+          <a
+            href="../pages/CourseEnRoute.html"
+            class="inline-flex items-center gap-3 rounded-md bg-brand px-6 py-3 text-white font-medium hover:bg-brand-light transition"
+          >
+            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/15">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5">
+                <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            Back
+          </a>
+        </div>
+      </section>
 
       <!-- Content -->
-<section class="page-container pt-10 pb-24">
+      <section class="max-w-6xl mx-auto px-6 pt-10 pb-24">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <!-- LEFT: SOS button -->
-          <div class="flex justify-center md:justify-start">
+          <!-- LEFT -->
+          <div class="flex flex-col items-center md:items-start">
+            <!-- SOS -->
             <div
               class="w-[320px] h-[220px] rounded-full border border-brand/30 bg-white shadow-[0_10px_25px_rgba(13,59,102,0.18)] flex flex-col items-center justify-center"
             >
@@ -126,33 +111,51 @@
                 Press and hold<br />for 3 seconds
               </p>
             </div>
+
+            <!-- Evaluate trip safety (UNDER SOS, same column) -->
+            <div class="mt-8 w-full flex flex-col items-center md:items-start">
+              <p class="text-sm text-slate-500 mb-3">Related to a recent trip?</p>
+
+              <a
+                href="../pages/EvaluerTrajet.html"
+                class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-slate-300 text-slate-700 hover:bg-slate-100 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5 text-brand">
+                  <path
+                    d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4Z"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="font-medium">Evaluate trip safety</span>
+              </a>
+            </div>
           </div>
 
           <!-- RIGHT: priority panel -->
           <div class="flex justify-center md:justify-end">
             <div class="w-full max-w-md rounded-lg bg-brand-light/35 p-8">
-             <a href="../pages/1.html" class="flex items-center justify-center gap-2 mb-8 text-xs text-slate-700 hover:text-brand transition-colors">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-       fill="none" stroke="currentColor" class="w-4 h-4">
-    <path d="M8 6h13M8 12h13M8 18h13" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M3 6h.01M3 12h.01M3 18h.01" stroke-width="3" stroke-linecap="round"/>
-  </svg>
-  <span>change priority</span>
-</a>
-
+              <a
+                href="../pages/1.html"
+                class="flex items-center justify-center gap-2 mb-8 text-xs text-slate-700 hover:text-brand transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-4 h-4">
+                  <path d="M8 6h13M8 12h13M8 18h13" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M3 6h.01M3 12h.01M3 18h.01" stroke-width="3" stroke-linecap="round" />
+                </svg>
+                <span>change priority</span>
+              </a>
 
               <div class="space-y-10">
                 <!-- Item 1 -->
                 <div class="flex items-start gap-6">
                   <p class="text-2xl font-semibold text-slate-800 leading-none">1</p>
-
                   <div class="flex-1 rounded-lg border border-slate-300 bg-white px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-3">
-                      <!-- small icon -->
                       <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-slate-100 text-brand">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" class="w-4 h-4">
-                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-4 h-4">
+                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round" />
                         </svg>
                       </span>
                       <span class="text-sm font-medium text-slate-800">General</span>
@@ -164,13 +167,11 @@
                 <!-- Item 2 -->
                 <div class="flex items-start gap-6">
                   <p class="text-2xl font-semibold text-slate-800 leading-none">2</p>
-
                   <div class="flex-1 rounded-lg border border-slate-300 bg-white px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-3">
                       <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-slate-100 text-brand">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" class="w-4 h-4">
-                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-4 h-4">
+                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round" />
                         </svg>
                       </span>
                       <span class="text-sm font-medium text-slate-800">Family</span>
@@ -182,13 +183,11 @@
                 <!-- Item 3 -->
                 <div class="flex items-start gap-6">
                   <p class="text-2xl font-semibold text-slate-800 leading-none">3</p>
-
                   <div class="flex-1 rounded-lg border border-slate-300 bg-white px-5 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-3">
                       <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-slate-100 text-brand">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                             fill="none" stroke="currentColor" class="w-4 h-4">
-                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-4 h-4">
+                          <path d="M4 7h16M4 12h16M4 17h16" stroke-width="1.8" stroke-linecap="round" />
                         </svg>
                       </span>
                       <span class="text-sm font-medium text-slate-800">Police</span>
@@ -199,13 +198,14 @@
               </div>
             </div>
           </div>
+          <!-- /RIGHT -->
         </div>
       </section>
     </main>
 
-    <!-- ================= FOOTER (COMMON) ================= -->
+    <!-- ================= FOOTER ================= -->
     <footer class="border-t border-slate-200">
-      <div class="page-container py-10">
+      <div class="max-w-6xl mx-auto px-6 py-10">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
           <div>
             <img src="../assets/images/samway.png" alt="SameWay" class="h-10 w-auto" />
@@ -243,19 +243,22 @@
           <p>© 2025 — Copyright</p>
           <div class="flex items-center gap-4">
             <a href="#" class="social-btn" aria-label="Instagram">
-  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-    <rect x="6" y="6" width="12" height="12" rx="3"></rect>
-    <circle cx="12" cy="12" r="3"></circle>
-    <circle cx="16.2" cy="7.8" r="0.8" fill="currentColor" stroke="none"></circle>
-  </svg>
-</a>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+                <circle cx="12" cy="12" r="3"></circle>
+                <circle cx="16.2" cy="7.8" r="0.8" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
 
-<a href="#" class="social-btn" aria-label="Facebook">
-  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-    <path d="M14 8h2V6h-2c-2 0-3 1-3 3v2H9v2h2v6h2v-6h2l1-2h-3V9c0-.7.3-1 1-1Z" fill="currentColor" stroke="none"></path>
-  </svg>
-</a>
-
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path
+                  d="M14 8h2V6h-2c-2 0-3 1-3 3v2H9v2h2v6h2v-6h2l1-2h-3V9c0-.7.3-1 1-1Z"
+                  fill="currentColor"
+                  stroke="none"
+                ></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
