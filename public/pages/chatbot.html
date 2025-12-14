@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="../assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Map</a>
+                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+                </div>
+
+                <!-- Right side -->
+                <div class="flex items-center gap-4">
+                    <!-- Search (desktop) -->
+                    <div class="hidden sm:block relative">
+                        <input type="text" placeholder="Search..." class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]" style="min-width:250px">
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="../assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer">
+
+                    <!-- Mobile Menu -->
+                    <details class="md:hidden relative">
+                        <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        </summary>
+
+                        <!-- Mobile Dropdown -->
+                        <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+                            <a href="#" class="block text-gray-700">Home</a>
+                            <a href="#" class="block text-gray-700">Map</a>
+                            <a href="#" class="block text-gray-700">Support</a>
+                            <input type="text" placeholder="Search..." class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="border-gray-200">
+        <div class="border-b py-6">
+            <h1 class="text-[#003d6b] text-4xl md:text-5xl font-bold text-center">ChatBot</h1>
+        </div>
+        
+        <!-- Breadcrumb -->
+        <nav class="px-4 md:px-6 py-3 flex items-center gap-2 text-gray-700">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+            </svg>
+            <span class="text-gray-400">›</span>
+            <span>Liste conducteur</span>
+            <span class="text-gray-400">›</span>
+            <span>ChatBot</span>
+        </nav>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="flex-1 flex flex-col max-w-5xl w-full mx-auto px-4 md:px-6 py-6">
+        <!-- Messages Area -->
+        <div class="flex-1 space-y-6 mb-6 overflow-y-auto">
+            <!-- User Message 1 -->
+            <div class="flex justify-end gap-3">
+                <div class="bg-white border-2 border-gray-300 rounded-2xl px-6 py-4 max-w-2xl shadow-sm">
+                    <p class="text-gray-700 text-base md:text-lg">Pas de correspondances, trouvez-moi le pilote le plus rapide</p>
+                </div>
+                <img src="../assets/images/avatar.png" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0">
+            </div>
+
+            <!-- Bot Message -->
+            <div class="flex justify-start gap-3">
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                        <circle cx="12" cy="10" r="1.5"/>
+                        <circle cx="8" cy="10" r="1.5"/>
+                        <circle cx="16" cy="10" r="1.5"/>
+                    </svg>
+                </div>
+                <div class="bg-gray-100 border-l-4 border-gray-400 rounded-r-2xl px-6 py-4 max-w-2xl shadow-sm">
+                    <p class="text-gray-700 text-base md:text-lg">Absolument, juste un instant</p>
+                </div>
+            </div>
+
+            <!-- User Message 2 -->
+            <div class="flex justify-end gap-3">
+                <div class="bg-white border-2 border-gray-300 rounded-2xl px-6 py-4 max-w-2xl shadow-sm">
+                    <p class="text-gray-700 text-base md:text-lg">Merci</p>
+                </div>
+                <img src="../assets/images/avatar.png" class="w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0">
+            </div>
+        </div>
+
+        <!-- Smart Match Button -->
+        <div class="flex justify-center mb-6">
+            <button class="bg-[#003d6b] hover:bg-[#002d4f] text-white px-10 md:px-16 py-3 md:py-3.5 rounded-lg text-lg font-medium transition-colors shadow-md">
+                Voir Votre Smartmatch
+            </button>
+        </div>
+
+        <!-- Message Input -->
+        <div class="border-2 border-[#003d6b] rounded-2xl px-4 md:px-6 py-3 md:py-4 flex items-center gap-3">
+            <input type="text" placeholder="Type a new message here" class="flex-1 outline-none text-base md:text-lg text-gray-700 placeholder-gray-500">
+            
+            <div class="flex items-center gap-2 md:gap-3">
+                <!-- Attachment Icon -->
+                <button class="text-gray-600 hover:text-[#003d6b] transition-colors">
+                    <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+                    </svg>
+                </button>
+
+                <!-- Emoji Icon -->
+                <button class="text-gray-600 hover:text-[#003d6b] transition-colors">
+                    <svg class="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="10" r="1" fill="currentColor"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    </svg>
+                </button>
+
+                <!-- Send Icon -->
+                <button class="text-[#003d6b] hover:text-[#002d4f] transition-colors">
+                    <svg class="w-7 h-7 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l9-7 9 7-9 11-9-11z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
