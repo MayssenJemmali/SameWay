@@ -18,7 +18,8 @@
 
                 <!-- Desktop Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+                          <a href="../index.html" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+
                     <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Map</a>
                     <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
                 </div>
@@ -43,7 +44,7 @@
 
                         <!-- Mobile Dropdown -->
                         <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
-                            <a href="#" class="block text-gray-700">Home</a>
+                            <a href="../index.html" class="block text-gray-700">Home</a>
                             <a href="#" class="block text-gray-700">Map</a>
                             <a href="#" class="block text-gray-700">Support</a>
                             <input type="text" placeholder="Search..." class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
@@ -57,7 +58,7 @@
     <!-- Header -->
     <div class="border-gray-200">
         <div class="border-b py-6">
-            <h1 class="text-[#003d6b] text-4xl md:text-5xl font-bold text-center">Liste conducteur</h1>
+            <h1 class="text-[#003d6b] text-4xl md:text-5xl font-bold text-center">Drivers List</h1>
         </div>
         
         <!-- Breadcrumb -->
@@ -66,7 +67,7 @@
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
             </svg>
             <span class="text-gray-400">›</span>
-            <span>Liste conducteur</span>
+            <span>Drivers List</span>
         </nav>
     </div>
 
@@ -77,7 +78,7 @@
             <!-- Filter Button -->
             <div class="flex justify-end mb-4">
                 <button onclick="toggleFilter()" class="bg-white text-[#003d6b] border-2 border-[#003d6b] px-8 py-2.5 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-2">
-                    <span>Filtre</span>
+                    <span>Filter</span>
                     <svg id="filterIcon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
@@ -88,7 +89,7 @@
             <div id="filterPanel" class="hidden bg-gray-50 border-2 border-[#003d6b] rounded-xl p-6 space-y-6 mb-6">
                 <!-- Rating Filter -->
                 <div>
-                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Rating minimum</label>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Minimum Rating</label>
                     <div class="flex items-center gap-4">
                         <input type="range" min="1" max="5" value="3" step="0.5" class="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#003d6b]" id="ratingSlider" oninput="updateRatingValue()">
                         <span id="ratingValue" class="text-[#003d6b] font-bold text-xl min-w-[60px]">3.0 ★</span>
@@ -97,7 +98,7 @@
 
                 <!-- Distance Filter -->
                 <div>
-                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Distance maximale</label>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Maximum Distance</label>
                     <div class="flex items-center gap-4">
                         <input type="range" min="1" max="15" value="10" class="flex-1 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer accent-[#003d6b]" id="distanceSlider" oninput="updateDistanceValue()">
                         <span id="distanceValue" class="text-[#003d6b] font-bold text-xl min-w-[80px]">10 min</span>
@@ -106,10 +107,10 @@
 
                 <!-- Car Type Filter -->
                 <div>
-                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Type de véhicule</label>
+                    <label class="block text-[#003d6b] text-lg font-semibold mb-3">Vehicle Type</label>
                     <div class="flex flex-wrap gap-3">
                         <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
-                            Tout
+                            All
                         </button>
                         <button onclick="toggleCarType(this)" class="px-4 py-2 border-2 border-[#003d6b] rounded-lg text-gray-700 hover:bg-[#003d6b] hover:text-white transition-colors">
                             Berline
@@ -126,10 +127,10 @@
                 <!-- Action Buttons -->
                 <div class="flex gap-4 pt-4">
                     <button onclick="applyFilters()" class="flex-1 bg-[#003d6b] text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-[#002d4f] transition-colors">
-                        Appliquer
+                            Apply
                     </button>
                     <button onclick="resetFilters()" class="flex-1 bg-white text-[#003d6b] border-2 border-[#003d6b] px-6 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors">
-                        Réinitialiser
+                            Reset
                     </button>
                 </div>
             </div>
