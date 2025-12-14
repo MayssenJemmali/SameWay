@@ -26,4 +26,19 @@
   /* Form controls */
   .input { @apply w-full border border-slate-300 rounded-md px-4 py-2 text-sm outline-none focus:border-brand; }
   .textarea { @apply w-full border border-slate-300 rounded-md p-4 text-sm outline-none focus:border-brand; }
+    /* Avatar (header) */
+  .avatar {
+    @apply w-9 h-9 rounded-full overflow-hidden border border-slate-200 bg-slate-100;
+  }
+  .avatar-img {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Social icons (footer) */
+  .social-btn {
+    @apply inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-200 text-brand hover:bg-slate-50 transition;
+  }
+  .social-icon {
+    @apply w-5 h-5;
+  }
 }
