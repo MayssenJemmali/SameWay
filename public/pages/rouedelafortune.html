@@ -3,26 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SameWay – Wheel of Fortune</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#FFFFFF',
-            secondary: '#0D3B66',
-            accent: '#5999B1',
-            grayline: '#D1D5DB',
-            brand: {
-              DEFAULT: '#0D3B66',
-              light: '#5999B1'
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <title>Wheel of Fortune</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body class="min-h-screen bg-white text-slate-900">
 
@@ -71,7 +53,6 @@
    
 
   <!-- BREADCRUMB & BACK BUTTON -->
-   <br>
   <section class="max-w-6xl mx-auto px-6 pt-6 pb-4">
     <div class="flex items-center justify-between mb-4">
       <a href="recherchedutrajet.html" class="inline-flex items-center gap-2 px-5 py-3 bg-brand text-white font-medium rounded-md hover:bg-brand-light transition-all duration-200 shadow-sm hover:shadow-md">
@@ -107,48 +88,38 @@
         <!-- Wheel SVG -->
         <div class="relative w-80 h-80 md:w-96 md:h-96">
           <svg id="wheel" class="w-full h-full drop-shadow-2xl" viewBox="0 0 400 400">
-            <!-- Outer circle border -->
-            <circle cx="200" cy="200" r="195" fill="none" stroke="#475569" stroke-width="4"/>
-            
-            <!-- Top-left segment (10% Reduction) -->
-            <path d="M 200 200 L 200 5 A 195 195 0 0 1 395 200 Z" fill="#dbeafe" stroke="#475569" stroke-width="3"/>
-            
-            <!-- Top-right segment (Free ride) -->
-            <path d="M 200 200 L 395 200 A 195 195 0 0 1 200 395 Z" fill="#bfdbfe" stroke="#475569" stroke-width="3"/>
-            
-            <!-- Bottom-right segment (No win) -->
-            <path d="M 200 200 L 200 395 A 195 195 0 0 1 5 200 Z" fill="#f1f5f9" stroke="#475569" stroke-width="3"/>
-            
-            <!-- Bottom-left segment (20% Reduction) -->
-            <path d="M 200 200 L 5 200 A 195 195 0 0 1 200 5 Z" fill="#93c5fd" stroke="#475569" stroke-width="3"/>
-            
-            <!-- Center circle -->
-            <circle cx="200" cy="200" r="35" fill="white" stroke="#475569" stroke-width="4"/>
-            <circle cx="200" cy="200" r="28" fill="#1e40af"/>
-            
-            <!-- Text labels -->
-            <text x="125" y="85" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-45 125 85)">Discount</text>
-            <text x="125" y="108" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-45 125 108)">10%</text>
-            
-            <text x="275" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 85)">Next</text>
-            <text x="275" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 105)">ride</text>
-            <text x="275" y="125" text-anchor="middle" font-size="18" font-weight="800" fill="#1e40af" transform="rotate(45 275 125)">FREE</text>
-            
-            <text x="275" y="315" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(135 275 315)">No</text>
-            <text x="275" y="335" text-anchor="middle" font-size="18" font-weight="700" fill="#64748b" transform="rotate(135 275 335)">win</text>
-            
-            <text x="125" y="285" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-135 125 285)">Discount</text>
-            <text x="125" y="308" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-135 125 308)">20%</text>
-          </svg>
-        </div>
+  <!-- Outer circle border -->
+  <circle cx="200" cy="200" r="195" fill="none" stroke="#475569" stroke-width="4"/>
+  
+  <!-- Toutes les sections en bleu clair identique -->
+  <path d="M 200 200 L 200 5 A 195 195 0 0 1 395 200 Z" fill="#a5d8ff" stroke="#475569" stroke-width="3"/>
+  <path d="M 200 200 L 395 200 A 195 195 0 0 1 200 395 Z" fill="#a5d8ff" stroke="#475569" stroke-width="3"/>
+  <path d="M 200 200 L 200 395 A 195 195 0 0 1 5 200 Z" fill="#a5d8ff" stroke="#475569" stroke-width="3"/>
+  <path d="M 200 200 L 5 200 A 195 195 0 0 1 200 5 Z" fill="#a5d8ff" stroke="#475569" stroke-width="3"/>
+  
+  <!-- Center circle -->
+  <circle cx="200" cy="200" r="35" fill="white" stroke="#475569" stroke-width="4"/>
+  <circle cx="200" cy="200" r="28" fill="white"/>
+  
+  <!-- Text labels (inchangés) -->
+  <text x="125" y="85" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-45 125 85)">Discount</text>
+  <text x="125" y="108" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-45 125 108)">10%</text>
+  
+  <text x="275" y="85" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 85)">Next</text>
+  <text x="275" y="105" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" transform="rotate(45 275 105)">ride</text>
+  <text x="275" y="125" text-anchor="middle" font-size="18" font-weight="800" fill="#1e40af" transform="rotate(45 275 125)">FREE</text>
+  
+  <text x="275" y="315" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(135 275 315)">No</text>
+  <text x="275" y="335" text-anchor="middle" font-size="18" font-weight="700" fill="#64748b" transform="rotate(135 275 335)">win</text>
+  
+  <text x="125" y="285" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" transform="rotate(-135 125 285)">Discount</text>
+  <text x="125" y="308" text-anchor="middle" font-size="22" font-weight="800" fill="#1e40af" transform="rotate(-135 125 308)">20%</text>
+</svg>    </div>
       </div>
 
       <!-- Spin Button -->
       <div class="text-center space-y-4">
         <button id="spin-btn" class="bg-brand hover:bg-brand-light text-white font-bold text-lg px-10 py-4 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 inline-flex items-center gap-3">
-          <svg id="spin-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-          </svg>
           <span id="spin-text">Spin the wheel</span>
         </button>
         <p class="text-sm text-slate-600 font-medium">1 attempt per day</p>
@@ -156,50 +127,43 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-200 mt-20">
-    <div class="max-w-6xl mx-auto px-6 py-10">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div class="flex items-center gap-2">
-          <svg class="w-10 h-10 text-brand" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-          </svg>
-          <span class="text-2xl font-bold text-brand">SameWay</span>
+   <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-slate-200">
+      <div class="page-container py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          <img src="../assets/images/samway.png" class="h-10" />
+
+          <div>
+            <p class="font-semibold mb-3">INFO</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li>Map</li><li>Schedule</li><li>Pricing</li><li>Support</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold mb-3">ABOUT</p>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li>Blog</li><li>About us</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold mb-3">CONTACT US</p>
+            <p class="text-sm text-slate-600">Pole ghazela, Ariana<br />+216 27429398<br />sameway@esprit.tn</p>
+          </div>
+
         </div>
 
-        <div>
-          <p class="font-semibold mb-3 text-slate-900">INFO</p>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">Map</a></li>
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">Schedule</a></li>
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">Pricing</a></li>
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">Support</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="font-semibold mb-3 text-slate-900">ABOUT</p>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">Blog</a></li>
-            <li><a href="#" class="hover:text-brand transition-colors duration-200">About us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="font-semibold mb-3 text-slate-900">CONTACT US</p>
-          <p class="text-sm text-slate-600 leading-relaxed">Pole ghazela, Ariana<br>+216 27429398<br>sameway@esprit.tn</p>
+        <div class="mt-10 flex justify-between text-xs text-slate-500">
+          <p>© 2025 — Copyright</p>
+          <div class="flex gap-4">
+            <span class="w-8 h-8 flex items-center justify-center border rounded-full">IG</span>
+            <span class="w-8 h-8 flex items-center justify-center border rounded-full">FB</span>
+          </div>
         </div>
       </div>
-
-      <div class="mt-10 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>© 2025 — Copyright</p>
-        <div class="flex gap-4">
-          <a href="#" class="w-8 h-8 flex items-center justify-center border-2 border-slate-300 rounded-full hover:border-brand hover:text-brand transition-all duration-200 hover:scale-110 font-semibold">IG</a>
-          <a href="#" class="w-8 h-8 flex items-center justify-center border-2 border-slate-300 rounded-full hover:border-brand hover:text-brand transition-all duration-200 hover:scale-110 font-semibold">FB</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
 
 
