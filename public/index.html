@@ -1,249 +1,278 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SameWay – Accueil</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body class="min-h-screen bg-white text-slate-900">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SameWay – Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- ================= HEADER ================= -->
-    <header class="border-b border-slate-200 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between py-5">
+<body class="min-h-screen bg-white text-slate-900">
 
-          <a href="index.html" class="flex items-center gap-2">
-            <img src="assets/images/samway.png" alt="SameWay" class="h-8 w-auto" />
+  <!-- ================= HEADER ================= -->
+  <nav class="bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <img src="./assets/images/samway.png" alt="SameWay Logo" class="h-16 w-auto">
+        </div>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Home</a>
+          <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Find a ride</a>
+          <a href="#" class="text-gray-700 hover:text-[#003d6b] text-lg font-medium">Support</a>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-4">
+
+          <!-- Search (desktop) -->
+          <div class="hidden sm:block relative">
+            <input type="text" placeholder="Search..."
+              class="pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50 focus:ring-2 focus:ring-[#003d6b]"
+              style="min-width:250px">
+          </div>
+
+          <!-- Avatar -->
+          <img src="./assets/images/avatar.png" class="w-12 h-12 rounded-full cursor-pointer">
+
+          <!-- Mobile Menu (CSS only) -->
+          <details class="md:hidden relative">
+            <summary class="list-none cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+              <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </summary>
+
+            <!-- Mobile Dropdown -->
+            <div class="absolute right-0 mt-4 w-56 bg-white border rounded-lg shadow-md p-4 space-y-3">
+              <a href="#" class="block text-gray-700">Home</a>
+              <a href="#" class="block text-gray-700">Find a ride</a>
+              <a href="#" class="block text-gray-700">Support</a>
+
+              <input type="text" placeholder="Search..." class="w-full mt-2 px-3 py-2 border rounded-lg bg-gray-50">
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="max-w-6xl mx-auto px-6 pt-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-16">
+
+        <div>
+          <h1 class="text-5xl md:text-6xl font-medium leading-[1.05] tracking-tight">
+            Smart, Safe & <br /> Affordable Rides
+          </h1>
+
+          <p class="mt-6 max-w-md text-base leading-relaxed text-slate-500">
+            Connect with verified students.<br />
+            Share rides, save money, and build community.
+          </p>
+
+          <a href="#"
+            class="mt-10 inline-flex items-center gap-3 rounded-md bg-brand px-6 py-3 text-white font-medium hover:bg-brand-light transition">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-brand">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                class="w-5 h-5">
+                <path d="M12 21s-7-4.5-7-10a7 7 0 1 1 14 0c0 5.5-7 10-7 10Z" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="12" cy="11" r="2.5" stroke-width="1.5" />
+              </svg>
+            </span>
+            <span>Find a ride</span>
+          </a>
+        </div>
+
+        <div class="flex justify-center md:justify-end">
+          <img src="assets/images/accueil.png" alt="Illustration covoiturage" class="w-full max-w-lg mt-6" />
+        </div>
+
+      </div>
+
+      <!-- ================= STATS ================= -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <article class="card">
+          <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
+            <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                class="w-6 h-6">
+                <path d="M3 13h18l-1.5-4.5A3 3 0 0 0 16.7 6H7.3A3 3 0 0 0 4.5 8.5L3 13Z" stroke-width="1.5" />
+                <circle cx="6.5" cy="16" r="1.5" />
+                <circle cx="17.5" cy="16" r="1.5" />
+              </svg>
+            </div>
+            <div class="flex justify-between items-end">
+              <p class="text-slate-700 text-sm font-medium">Active Riders</p>
+              <p class="text-brand text-lg font-semibold">+500</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
+            <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                class="w-6 h-6">
+                <circle cx="12" cy="12" r="9" stroke-width="1.5" />
+                <path d="M8 12l2.5 2.5L16 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex justify-between items-end">
+              <p class="text-slate-700 text-sm font-medium">Rides Completed</p>
+              <p class="text-brand text-lg font-semibold">+1500</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
+            <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                class="w-6 h-6">
+                <path d="M12 17.25l-5.5 3 1.5-6.2L3 9.75l6.3-.55L12 3l2.7 6.2 6.3.55-5 4.3 1.5 6.2-5.5-3Z"
+                  stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="flex justify-between items-end">
+              <p class="text-slate-700 text-sm font-medium">Average Rating</p>
+              <p class="text-brand text-lg font-semibold">4.8</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE ================= -->
+    <section class="page-container pt-24 pb-16">
+      <h2 class="text-center text-2xl md:text-3xl font-semibold text-brand mb-20">
+        Why Choose SameWay?
+      </h2>
+
+      <div class="space-y-24">
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2">
+            <div class="flex items-baseline gap-3">
+              <span class="text-5xl md:text-6xl font-semibold text-brand-light">01.</span>
+              <h3 class="text-xl md:text-2xl font-semibold">Verified Community</h3>
+            </div>
+            <p class="muted mt-3 max-w-md">
+              All users verified with college ID and driving license
+            </p>
+          </div>
+          <div class="md:w-1/2 flex justify-center md:justify-end">
+            <img src="assets/images/verified_community.png" class="w-full max-w-md" />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+          <div class="md:w-1/2 text-right">
+            <div class="flex items-baseline gap-3 justify-end">
+              <span class="text-5xl md:text-6xl font-semibold text-brand-light">02.</span>
+              <h3 class="text-xl md:text-2xl font-semibold">Fair Pricing</h3>
+            </div>
+            <p class="muted mt-3 max-w-md ml-auto">
+              Split costs fairly with auto-calculated fares
+            </p>
+          </div>
+          <div class="md:w-1/2 flex justify-center md:justify-start">
+            <img src="assets/images/fair_pricing.png" class="w-full max-w-md opacity-60" />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2">
+            <div class="flex items-baseline gap-3">
+              <span class="text-5xl md:text-6xl font-semibold text-brand-light">03.</span>
+              <h3 class="text-xl md:text-2xl font-semibold">Real-Time Tracking</h3>
+            </div>
+            <p class="muted mt-3 max-w-md">
+              Live GPS tracking and emergency SOS button
+            </p>
+          </div>
+          <div class="md:w-1/2 flex justify-center md:justify-end">
+            <img src="assets/images/real_time_tracking.png" class="w-full max-w-md" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-200">
+    <div class="page-container py-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+        <div>
+          <img src="../assets/images/samway.png" alt="SameWay" class="h-10 w-auto" />
+        </div>
+
+        <div>
+          <p class="font-semibold text-slate-800 mb-3">INFO</p>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-brand">Map</a></li>
+            <li><a href="#" class="hover:text-brand">Schedule</a></li>
+            <li><a href="#" class="hover:text-brand">Pricing</a></li>
+            <li><a href="#" class="hover:text-brand">Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-semibold text-slate-800 mb-3">ABOUT</p>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-brand">Blog</a></li>
+            <li><a href="#" class="hover:text-brand">About us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-semibold text-slate-800 mb-3">CONTACT US</p>
+          <div class="space-y-1 text-sm text-slate-600">
+            <p>Pole ghazela, Ariana</p>
+            <p>+216 27429398</p>
+            <p>sameway@esprit.tn</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex items-center justify-between text-xs text-slate-500">
+        <p>© 2025 — Copyright</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <circle cx="16.2" cy="7.8" r="0.8" fill="currentColor" stroke="none"></circle>
+            </svg>
           </a>
 
-          <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-            <a href="index.html" class="hover:text-brand">Home</a>
-            <a href="#" class="hover:text-brand">Map</a>
-            <a href="#" class="hover:text-brand">Support</a>
-          </nav>
-
-          <div class="flex items-center gap-4">
-            <div class="hidden md:flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-md">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor"
-                   class="w-4 h-4 text-slate-500">
-                <circle cx="11" cy="11" r="7" stroke-width="1.5" />
-                <path d="M20 20l-3.5-3.5" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-              <input
-                type="text"
-                placeholder="Search..."
-                class="bg-transparent text-sm outline-none placeholder-slate-500 w-48"
-              />
-            </div>
-
-            <div class="w-9 h-9 rounded-full bg-slate-200"></div>
-          </div>
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M14 8h2V6h-2c-2 0-3 1-3 3v2H9v2h2v6h2v-6h2l1-2h-3V9c0-.7.3-1 1-1Z" fill="currentColor"
+                stroke="none"></path>
+            </svg>
+          </a>
 
         </div>
       </div>
-    </header>
+    </div>
+  </footer>
 
-    <!-- ================= MAIN ================= -->
-    <main>
+</body>
 
-      <!-- ================= HERO ================= -->
-      <section class="max-w-6xl mx-auto px-6 pt-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-16">
-
-          <div>
-            <h1 class="text-5xl md:text-6xl font-medium leading-[1.05] tracking-tight">
-              Smart, Safe & <br /> Affordable Rides
-            </h1>
-
-            <p class="mt-6 max-w-md text-base leading-relaxed text-slate-500">
-              Connect with verified students.<br />
-              Share rides, save money, and build community.
-            </p>
-
-            <a
-              href="#"
-              class="mt-10 inline-flex items-center gap-3 rounded-md bg-brand px-6 py-3 text-white font-medium hover:bg-brand-light transition"
-            >
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-brand">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 24 24"
-                     fill="none" stroke="currentColor"
-                     class="w-5 h-5">
-                  <path d="M12 21s-7-4.5-7-10a7 7 0 1 1 14 0c0 5.5-7 10-7 10Z"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                  <circle cx="12" cy="11" r="2.5" stroke-width="1.5"/>
-                </svg>
-              </span>
-              <span>Find a ride</span>
-            </a>
-          </div>
-
-          <div class="flex justify-center md:justify-end">
-            <img
-              src="assets/images/accueil.png"
-              alt="Illustration covoiturage"
-              class="w-full max-w-lg mt-6"
-            />
-          </div>
-
-        </div>
-
-        <!-- ================= STATS ================= -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <article class="card">
-            <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
-              <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                     fill="none" stroke="currentColor" class="w-6 h-6">
-                  <path d="M3 13h18l-1.5-4.5A3 3 0 0 0 16.7 6H7.3A3 3 0 0 0 4.5 8.5L3 13Z" stroke-width="1.5"/>
-                  <circle cx="6.5" cy="16" r="1.5"/>
-                  <circle cx="17.5" cy="16" r="1.5"/>
-                </svg>
-              </div>
-              <div class="flex justify-between items-end">
-                <p class="text-slate-700 text-sm font-medium">Active Riders</p>
-                <p class="text-brand text-lg font-semibold">+500</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
-              <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                     fill="none" stroke="currentColor" class="w-6 h-6">
-                  <circle cx="12" cy="12" r="9" stroke-width="1.5"/>
-                  <path d="M8 12l2.5 2.5L16 9" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="flex justify-between items-end">
-                <p class="text-slate-700 text-sm font-medium">Rides Completed</p>
-                <p class="text-brand text-lg font-semibold">+1500</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-body flex flex-col justify-between gap-4 min-h-[100px]">
-              <div class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-brand">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                     fill="none" stroke="currentColor" class="w-6 h-6">
-                  <path d="M12 17.25l-5.5 3 1.5-6.2L3 9.75l6.3-.55L12 3l2.7 6.2 6.3.55-5 4.3 1.5 6.2-5.5-3Z"
-                        stroke-width="1.5" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="flex justify-between items-end">
-                <p class="text-slate-700 text-sm font-medium">Average Rating</p>
-                <p class="text-brand text-lg font-semibold">4.8</p>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ================= WHY CHOOSE ================= -->
-      <section class="page-container pt-24 pb-16">
-        <h2 class="text-center text-2xl md:text-3xl font-semibold text-brand mb-20">
-          Why Choose SameWay?
-        </h2>
-
-        <div class="space-y-24">
-
-          <div class="flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-              <div class="flex items-baseline gap-3">
-                <span class="text-5xl md:text-6xl font-semibold text-brand-light">01.</span>
-                <h3 class="text-xl md:text-2xl font-semibold">Verified Community</h3>
-              </div>
-              <p class="muted mt-3 max-w-md">
-                All users verified with college ID and driving license
-              </p>
-            </div>
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-              <img src="assets/images/verified_community.png" class="w-full max-w-md" />
-            </div>
-          </div>
-
-          <div class="flex flex-col md:flex-row-reverse items-center gap-10">
-            <div class="md:w-1/2 text-right">
-              <div class="flex items-baseline gap-3 justify-end">
-                <span class="text-5xl md:text-6xl font-semibold text-brand-light">02.</span>
-                <h3 class="text-xl md:text-2xl font-semibold">Fair Pricing</h3>
-              </div>
-              <p class="muted mt-3 max-w-md ml-auto">
-                Split costs fairly with auto-calculated fares
-              </p>
-            </div>
-            <div class="md:w-1/2 flex justify-center md:justify-start">
-              <img src="assets/images/fair_pricing.png" class="w-full max-w-md opacity-60" />
-            </div>
-          </div>
-
-          <div class="flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-              <div class="flex items-baseline gap-3">
-                <span class="text-5xl md:text-6xl font-semibold text-brand-light">03.</span>
-                <h3 class="text-xl md:text-2xl font-semibold">Real-Time Tracking</h3>
-              </div>
-              <p class="muted mt-3 max-w-md">
-                Live GPS tracking and emergency SOS button
-              </p>
-            </div>
-            <div class="md:w-1/2 flex justify-center md:justify-end">
-              <img src="assets/images/real_time_tracking.png" class="w-full max-w-md" />
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="border-t border-slate-200">
-      <div class="page-container py-10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-
-          <img src="assets/images/samway.png" class="h-10" />
-
-          <div>
-            <p class="font-semibold mb-3">INFO</p>
-            <ul class="space-y-2 text-sm text-slate-600">
-              <li>Map</li><li>Schedule</li><li>Pricing</li><li>Support</li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-semibold mb-3">ABOUT</p>
-            <ul class="space-y-2 text-sm text-slate-600">
-              <li>Blog</li><li>About us</li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-semibold mb-3">CONTACT US</p>
-            <p class="text-sm text-slate-600">Pole ghazela, Ariana<br />+216 27429398<br />sameway@esprit.tn</p>
-          </div>
-
-        </div>
-
-        <div class="mt-10 flex justify-between text-xs text-slate-500">
-          <p>© 2025 — Copyright</p>
-          <div class="flex gap-4">
-            <span class="w-8 h-8 flex items-center justify-center border rounded-full">IG</span>
-            <span class="w-8 h-8 flex items-center justify-center border rounded-full">FB</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </body>
 </html>
