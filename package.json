@@ -2,13 +2,12 @@
   "name": "final",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "sass:watch": "sass --watch src/styles.scss src/scss.css",
-  "tw:watch": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
-  "dev": "concurrently \"npm run sass:watch\" \"npm run tw:watch\"",
-  "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css"
-}
-,
+  "scripts": {
+    "sass:watch": "sass --watch src/styles.scss src/scss.css",
+    "tw:watch": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run tw:watch\"",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
